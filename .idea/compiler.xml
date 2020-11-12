@@ -9,7 +9,6 @@
         <module name="GMIBANKproject" />
         <module name="GMIBANK" />
         <module name="GMIBank" />
-        <module name="GMIBANKproject" />
       </profile>
     </annotationProcessing>
   </component>
