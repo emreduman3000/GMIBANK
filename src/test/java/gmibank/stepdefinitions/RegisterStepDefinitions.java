@@ -80,8 +80,7 @@ public class RegisterStepDefinitions {
 
     @Then("verify the user's registration is successful")
     public void verify_the_user_s_registration_is_successful() {
-        Assert.assertTrue(Driver.waitAndGetText(registrationPage.successMessage,5).contains("Registration saved"));
-
+        Driver.waitForVisibility((registrationPage.successMessage), 5);
 
     }
 
