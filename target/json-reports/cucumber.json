@@ -3,39 +3,132 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-11-08T23:55:57.286Z",
-        "line": 3,
-        "name": "TC01_kullanici apinin calistini kontrol eder",
+        "line": 4,
+        "name": "user is on the login page",
         "description": "",
-        "id": "api-test;tc01-kullanici-apinin-calistini-kontrol-eder",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 18642000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-15T11:29:48.995Z",
+        "line": 41,
+        "name": "User navigate to registration page if they did not register yet",
+        "description": "",
+        "id": "login-negative;user-navigate-to-registration-page-if-they-did-not-register-yet",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 112000000,
+              "status": "passed"
             },
-            "line": 4,
-            "name": "kullanici kendisine verilen token ile apiye baglanir",
-            "match": {},
-            "keyword": "Given "
+            "line": 42,
+            "name": "user clicks on the username textbox and text invalid username",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_username_textbox_and_text_invalid_username()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "user clicks on the password textbox and text invalid password",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_password_textbox_and_text_invalid_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 96000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "user clicks on the sign in button",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_clicks_on_the_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2104000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user verify the error message",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_error_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 304000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user clicks on this text \"You don\u0027t have an account yet? Register a new account\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"You don\u0027t have an account yet? Register a new account\"",
+                  "offset": 25
+                }
+              ],
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_this_text(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2160000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user verify the Registration page",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_Registration_page()"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@api"
+            "name": "@loginNegative"
+          },
+          {
+            "name": "@Negative5"
           }
         ]
       }
     ],
-    "name": "API Test",
+    "name": "Login negative",
     "description": "",
-    "id": "api-test",
+    "id": "login-negative",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/api.feature",
+    "uri": "file:src/test/resources/features/LoginNegative.feature",
     "tags": [
       {
-        "name": "@api",
+        "name": "@loginNegative",
         "type": "Tag",
         "location": {
           "line": 1,

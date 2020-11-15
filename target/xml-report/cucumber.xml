@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="1" time="0.903">
-<testcase classname="API Test" name="TC01_kullanici apinin calistini kontrol eder" time="0.196">
-<skipped><![CDATA[Given kullanici kendisine verilen token ile apiye baglanir..................undefined
-]]></skipped>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.236">
+<testcase classname="Login negative" name="User navigate to registration page if they did not register yet" time="23.692">
+<system-out><![CDATA[Given user is on the login page.............................................passed
+And user clicks on the username textbox and text invalid username...........passed
+And user clicks on the password textbox and text invalid password...........passed
+And user clicks on the sign in button.......................................passed
+Then user verify the error message..........................................passed
+And user clicks on this text "You don't have an account yet? Register a new account".passed
+Then user verify the Registration page......................................passed
+]]></system-out>
 </testcase>
 </testsuite>

@@ -37,14 +37,14 @@ Feature:Login negative
     And user clicks the Reset password button
     Then user verify the success message
 
-  @Negative5
-  Scenario: User navigate to registration page if they did not register yet
-    And user clicks on the username textbox and text invalid username
-    And user clicks on the password textbox and text invalid password
-    And user clicks on the sign in button
-    Then user verify the error message
-    And user clicks on this text "You don't have an account yet? Register a new account"
-    Then user verify the Registration page
+    @Negative5
+    Scenario: User navigate to registration page if they did not register yet
+      And user clicks on the username textbox and text invalid username
+      And user clicks on the password textbox and text invalid password
+      And user clicks on the sign in button
+      Then user verify the error message
+      And user clicks on this text "You don't have an account yet? Register a new account"
+      Then user verify the Registration page
 
 
 
