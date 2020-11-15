@@ -1,9 +1,9 @@
-
 Feature: login page feature
 
   Background: user is on the login page
     Given user is on the login page
-@loginPositive
+
+  @loginPositive
   Scenario Outline: log in to page
     And user clicks on the username textbox and text "<valid username>"
     And user clicks on the password textbox and text "<valid password>"
