@@ -12,24 +12,27 @@ public class LoginTestStepdefinitions {
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
-        Driver.getDriver().get("http://gmibank.com/login");
+        Driver.getDriver().get(ConfigurationReader.getProperty("loginUrl"));
 
     }
 
     @Given("user clicks on the username textbox and text {string}")
     public void user_clicks_on_the_username_textbox_and_text(String string) {
-       loginPage.usernamebox.sendKeys(string);
+
+        Driver.waitAndSendText(loginPage.usernamebox,string,5);
     }
 
     @Given("user clicks on the password textbox and text {string}")
     public void user_clicks_on_the_password_textbox_and_text(String string) {
-        loginPage.passwordbox.sendKeys(string);
+        Driver.waitAndSendText(loginPage.passwordbox,string,5);
+
     }
 
 
     @Given("user clicks on the sign in button")
     public void user_clicks_on_the_sign_in_button() {
-        loginPage.signInButton.click();
+        Driver.waitAndClick(loginPage.signInButton,5);
+
     }
 
     @Then("user verify to login")
@@ -44,8 +47,8 @@ public class LoginTestStepdefinitions {
     }
     @Given("user clicks on the cancel button")
     public void user_clicks_on_the_cancel_button_button() {
+        Driver.waitAndClick(loginPage.cancelButton,5);
 
-        loginPage.cancelButton.click();
     }
 
     @Then("user verify to homepage")
