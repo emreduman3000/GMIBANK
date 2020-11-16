@@ -4,13 +4,27 @@
     "elements": [
       {
         "line": 4,
+<<<<<<< HEAD
+        "name": "user is on the login page",
+=======
         "name": "user is on the url",
+>>>>>>> master
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
+              "duration": 11449000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the login page",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_is_on_the_login_page()"
+            },
+=======
               "status": "undefined"
             },
             "line": 5,
@@ -893,23 +907,107 @@
             "line": 5,
             "name": "user is on the GMIBank registration page",
             "match": {},
+>>>>>>> master
             "keyword": "Given "
           }
         ]
       },
       {
+<<<<<<< HEAD
+        "start_timestamp": "2020-11-16T17:56:48.363Z",
+        "line": 41,
+        "name": "User navigate to registration page if they did not register yet",
+        "description": "",
+        "id": "login-negative;user-navigate-to-registration-page-if-they-did-not-register-yet",
+=======
         "start_timestamp": "2020-11-12T03:58:32.581Z",
         "line": 47,
         "name": "User should not enter invalid Mobilephone Number",
         "description": "",
         "id": "gmibank-registration;user-should-not-enter-invalid-mobilephone-number",
+>>>>>>> master
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 238000000,
+              "status": "passed"
             },
+<<<<<<< HEAD
+            "line": 42,
+            "name": "user clicks on the username textbox and text invalid username",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_username_textbox_and_text_invalid_username()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 214000000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "user clicks on the password textbox and text invalid password",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_password_textbox_and_text_invalid_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 111000000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "user clicks on the sign in button",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_clicks_on_the_sign_in_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2062000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user verify the error message",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_error_message()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 276000000,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user clicks on this text \"You don\u0027t have an account yet? Register a new account\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"You don\u0027t have an account yet? Register a new account\"",
+                  "offset": 25
+                }
+              ],
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_this_text(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2100000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user verify the Registration page",
+            "match": {
+              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_Registration_page()"
+            },
+            "keyword": "Then "
+=======
             "line": 48,
             "name": "user enter invalid Mobilephone number",
             "match": {},
@@ -946,6 +1044,7 @@
             "name": "user is on the GMIBank registration page",
             "match": {},
             "keyword": "Given "
+>>>>>>> master
           }
         ]
       },
@@ -979,11 +1078,28 @@
         ],
         "tags": [
           {
+<<<<<<< HEAD
+            "name": "@loginNegative"
+          },
+          {
+            "name": "@Negative5"
+=======
             "name": "@register"
+>>>>>>> master
           }
         ]
       }
     ],
+<<<<<<< HEAD
+    "name": "Login negative",
+    "description": "",
+    "id": "login-negative",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/LoginNegative.feature",
+    "tags": [
+      {
+        "name": "@loginNegative",
+=======
     "name": "GMIBank Registration",
     "description": "",
     "id": "gmibank-registration",
@@ -992,6 +1108,7 @@
     "tags": [
       {
         "name": "@register",
+>>>>>>> master
         "type": "Tag",
         "location": {
           "line": 1,

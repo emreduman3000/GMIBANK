@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.656">
+<testcase classname="Login negative" name="User navigate to registration page if they did not register yet" time="16.709">
+<system-out><![CDATA[Given user is on the login page.............................................passed
+And user clicks on the username textbox and text invalid username...........passed
+And user clicks on the password textbox and text invalid password...........passed
+And user clicks on the sign in button.......................................passed
+Then user verify the error message..........................................passed
+And user clicks on this text "You don't have an account yet? Register a new account".passed
+Then user verify the Registration page......................................passed
+]]></system-out>
+=======
 <testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="9" tests="9" time="0.588">
 <testcase classname="GMIBank Registration" name="User should register with valid credentials" time="0.089">
 <skipped><![CDATA[Given user is on the GMIBank registration page..............................undefined
@@ -110,5 +122,6 @@ Then verify invalid Mobilephone number message..............................unde
 When user enter invalid email...............................................undefined
 Then verify invalid email message...........................................undefined
 ]]></skipped>
+>>>>>>> master
 </testcase>
 </testsuite>
