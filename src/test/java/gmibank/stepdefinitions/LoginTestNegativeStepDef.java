@@ -2,7 +2,6 @@ package gmibank.stepdefinitions;
 
 import gmibank.pages.LoginPage;
 import gmibank.utilities.Driver;
-import gmibank.utilities.ReusableMethods;
 import io.cucumber.java.bs.A;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -25,7 +24,7 @@ public class LoginTestNegativeStepDef {
     @Then("user verify the error message")
     public void user_verify_the_error_message() {
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -69,7 +68,7 @@ public class LoginTestNegativeStepDef {
     @Then("user verify the success message")
     public void user_verify_the_success_message() {
 
-ReusableMethods.waitForVisibility((loginPage.verifyMessage),5);
+Driver.waitForVisibility((loginPage.verifyMessage),5);
 
 
     }

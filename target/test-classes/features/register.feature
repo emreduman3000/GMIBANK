@@ -19,10 +19,10 @@
 
       Examples: Test Data
       |ssn|firstname|lastname|address|pNumber|username|email|password|
-      |121-11-0004|john|smith|8080 winter circle Alpharetta 30011|780-232-2222|jsmith|jsmith@gmail.com|john_1234|
-      |278-80-1003|marry|alice|2021 summer circle                |330-345-6789|alice |alice@gmail.com |1234     |
-      |111-99-1111|a    |b    |Time Square                       |000-000-0000|8     |a@hotmail.com   |12345678 |
-      |627-99-3440|123  |456  |2000                              |210-200-2000|a123  |123@yahoo.com   |tester   |
+      |121-11-0123|john|smith|8080 winter circle Alpharetta 30011|780-232-2222|jsmith|jsmith@gmail.com|john_1234|
+      |278-80-1678|marry|alice|2021 summer circle                |330-345-6789|alice |alice@gmail.com |1234     |
+      |111-99-1876|a    |b    |Time Square                       |000-000-0000|8     |a@hotmail.com   |12345678 |
+      |627-99-3432|123  |456  |2000                              |210-200-2000|a123  |123@yahoo.com   |tester   |
       |999-29-2250|jim  |co   |101 Cumming 30040                 |999-999-9999|co    |jimco@gmail.com |Jim?101  |
 
     Scenario: User should not leave the mandatory text boxes empty
