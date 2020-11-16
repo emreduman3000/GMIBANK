@@ -4,13 +4,18 @@
     "elements": [
       {
         "line": 4,
+<<<<<<< HEAD
         "name": "user is on the login page",
+=======
+        "name": "user is on the url",
+>>>>>>> master
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "duration": 11449000000,
               "status": "passed"
             },
@@ -19,16 +24,908 @@
             "match": {
               "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_is_on_the_login_page()"
             },
+=======
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
             "keyword": "Given "
           }
         ]
       },
       {
+        "start_timestamp": "2020-11-12T03:58:32.376Z",
+        "line": 21,
+        "name": "User should register with valid credentials",
+        "description": "",
+        "id": "gmibank-registration;user-should-register-with-valid-credentials;test-data;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user enters valid SSN \"222-11-3322\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "user enters valid first name \"john\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "user enters valid last name \"smith\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "user enters valid address \"8080 winter circle Alpharetta 30011\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "user enters valid mobile phone number \"780-232-2222\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "user enters valid Username \"jsmith\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "user enters valid Email \"jsmith@gmail.com\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "user enters valid password \"john_1234\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "user enters password confirmation \"john_1234\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "user clicks on register button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "verify the user\u0027s registration is successful",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.496Z",
+        "line": 22,
+        "name": "User should register with valid credentials",
+        "description": "",
+        "id": "gmibank-registration;user-should-register-with-valid-credentials;test-data;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user enters valid SSN \"378-88-1000\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "user enters valid first name \"marry\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "user enters valid last name \"alice\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "user enters valid address \"2021 summer circle\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "user enters valid mobile phone number \"330-345-6789\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "user enters valid Username \"alice\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "user enters valid Email \"alice@gmail.com\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "user enters valid password \"1234\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "user enters password confirmation \"1234\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "user clicks on register button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "verify the user\u0027s registration is successful",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.511Z",
+        "line": 23,
+        "name": "User should register with valid credentials",
+        "description": "",
+        "id": "gmibank-registration;user-should-register-with-valid-credentials;test-data;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user enters valid SSN \"111-11-1111\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "user enters valid first name \"a\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "user enters valid last name \"b\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "user enters valid address \"Time Square\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "user enters valid mobile phone number \"000-000-0000\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "user enters valid Username \"8\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "user enters valid Email \"a@hotmail.com\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "user enters valid password \"12345678\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "user enters password confirmation \"12345678\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "user clicks on register button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "verify the user\u0027s registration is successful",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.527Z",
+        "line": 24,
+        "name": "User should register with valid credentials",
+        "description": "",
+        "id": "gmibank-registration;user-should-register-with-valid-credentials;test-data;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user enters valid SSN \"567-90-3456\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "user enters valid first name \"123\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "user enters valid last name \"456\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "user enters valid address \"2000\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "user enters valid mobile phone number \"210-200-2000\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "user enters valid Username \"a123\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "user enters valid Email \"123@yahoo.com\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "user enters valid password \"tester\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "user enters password confirmation \"tester\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "user clicks on register button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "verify the user\u0027s registration is successful",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.551Z",
+        "line": 25,
+        "name": "User should register with valid credentials",
+        "description": "",
+        "id": "gmibank-registration;user-should-register-with-valid-credentials;test-data;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user enters valid SSN \"999-11-2341\"",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 9,
+            "name": "user enters valid first name \"jim\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "user enters valid last name \"co\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "user enters valid address \"101 Cumming 30040\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "user enters valid mobile phone number \"999-999-9999\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13,
+            "name": "user enters valid Username \"co\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "user enters valid Email \"jimco@gmail.com\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "user enters valid password \"Jim?101\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "user enters password confirmation \"Jim?101\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "user clicks on register button",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "verify the user\u0027s registration is successful",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.565Z",
+        "line": 27,
+        "name": "User should not leave the mandatory text boxes empty",
+        "description": "",
+        "id": "gmibank-registration;user-should-not-leave-the-mandatory-text-boxes-empty",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 28,
+            "name": "user leave SSN text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 29,
+            "name": "verify required SSN message",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 30,
+            "name": "user leave firstname text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 31,
+            "name": "verify required firstname  message",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 32,
+            "name": "user leave lastname text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 33,
+            "name": "verify required lastname message",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 34,
+            "name": "user leave username text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 35,
+            "name": "verify required username message",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 36,
+            "name": "user leave email text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 37,
+            "name": "verify required email message",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 38,
+            "name": "user leave password text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 39,
+            "name": "verify required password message",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 40,
+            "name": "user leave confirmation password text box empty",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 41,
+            "name": "verify required confirmation password message",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.581Z",
+        "line": 43,
+        "name": "User should not enter invalid SSN",
+        "description": "",
+        "id": "gmibank-registration;user-should-not-enter-invalid-ssn",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 44,
+            "name": "user enter invalid SSN",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 45,
+            "name": "verify invalid SSN message",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+>>>>>>> master
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+<<<<<<< HEAD
         "start_timestamp": "2020-11-16T17:56:48.363Z",
         "line": 41,
         "name": "User navigate to registration page if they did not register yet",
         "description": "",
         "id": "login-negative;user-navigate-to-registration-page-if-they-did-not-register-yet",
+=======
+        "start_timestamp": "2020-11-12T03:58:32.581Z",
+        "line": 47,
+        "name": "User should not enter invalid Mobilephone Number",
+        "description": "",
+        "id": "gmibank-registration;user-should-not-enter-invalid-mobilephone-number",
+>>>>>>> master
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
@@ -37,6 +934,7 @@
               "duration": 238000000,
               "status": "passed"
             },
+<<<<<<< HEAD
             "line": 42,
             "name": "user clicks on the username textbox and text invalid username",
             "match": {
@@ -109,18 +1007,90 @@
               "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_Registration_page()"
             },
             "keyword": "Then "
+=======
+            "line": 48,
+            "name": "user enter invalid Mobilephone number",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 49,
+            "name": "verify invalid Mobilephone number message",
+            "match": {},
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
+            "name": "@register"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "user is on the url",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5,
+            "name": "user is on the GMIBank registration page",
+            "match": {},
+            "keyword": "Given "
+>>>>>>> master
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-12T03:58:32.597Z",
+        "line": 51,
+        "name": "User should not enter invalid email",
+        "description": "",
+        "id": "gmibank-registration;user-should-not-enter-invalid-email",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 52,
+            "name": "user enter invalid email",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 53,
+            "name": "verify invalid email message",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+<<<<<<< HEAD
             "name": "@loginNegative"
           },
           {
             "name": "@Negative5"
+=======
+            "name": "@register"
+>>>>>>> master
           }
         ]
       }
     ],
+<<<<<<< HEAD
     "name": "Login negative",
     "description": "",
     "id": "login-negative",
@@ -129,6 +1099,16 @@
     "tags": [
       {
         "name": "@loginNegative",
+=======
+    "name": "GMIBank Registration",
+    "description": "",
+    "id": "gmibank-registration",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/register.feature",
+    "tags": [
+      {
+        "name": "@register",
+>>>>>>> master
         "type": "Tag",
         "location": {
           "line": 1,
