@@ -10,17 +10,12 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
         },
-        features = "src/test/resources",
-        glue="gmibank/stepdefinitions",
-        tags ="@api",
+        features = "src/test/resources/features",
+        glue="gmibank.stepdefinitions",
+        tags ="@Negative1",
         dryRun=false
 
+
 )
-
-public class Runner {
-
+public class LoginRunner {
 }
-
-
-
-
