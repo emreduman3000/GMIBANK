@@ -206,4 +206,5 @@ public class Driver
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.textToBe(locator,text));
     }
+
 }
