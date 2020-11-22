@@ -1,6 +1,7 @@
 package gmibank.stepdefinitions;
 
 import gmibank.pages.CustomerCreation;
+import gmibank.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -13,17 +14,18 @@ import java.util.List;
 
 public class CustomerCreationStepDefinition {
     CustomerCreation customerCreation = new CustomerCreation();
+    LoginPage loginPage = new LoginPage();
 
     @Given("user clicks on the username textbox and enter the employee username")
     public void user_clicks_on_the_username_textbox_and_enter_the_employee_username() {
-        customerCreation.usernamebox.click();
-        customerCreation.usernamebox.sendKeys("group8employee");
+        loginPage.usernamebox.click();
+        loginPage.usernamebox.sendKeys("group8employee");
     }
 
     @Given("user clicks on the password textbox and enter the employee password")
     public void user_clicks_on_the_password_textbox_and_enter_the_employee_password() {
-        customerCreation.passwordbox.click();
-        customerCreation.passwordbox.sendKeys("group8employee");
+        loginPage.passwordbox.click();
+        loginPage.passwordbox.sendKeys("group8employee");
     }
 
     @Given("user clicks on My Operations")
