@@ -18,10 +18,10 @@ public class NewApplicantInfoStepDefinitions {
 
     @Given("the user goes to gmi_login_url and signs in as an Employee")
     public void the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("gmi_login_url"));
-        createOrEditANewCustomer.userName.sendKeys(ConfigurationReader.getProperty("employee_id"));
-        createOrEditANewCustomer.password.sendKeys(ConfigurationReader.getProperty("employee_password"));
-        createOrEditANewCustomer.submitButton.click();
+        Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
+        Driver.waitAndSendText(createOrEditANewCustomer.userName,ConfigurationReader.getProperty("employee_id"),5);
+        Driver.waitAndSendText(createOrEditANewCustomer.password,ConfigurationReader.getProperty("employee_password"),5);
+        Driver.waitAndClick(createOrEditANewCustomer.submitButton,5);
     }
 
     @When("user navigates to My operations")
@@ -88,9 +88,9 @@ public class NewApplicantInfoStepDefinitions {
             } else {
                 System.out.println("Username info is missing");
                 flag = false;
-                }
+            }
             Assert.assertTrue(flag);
 
-        }}
-
+        }
+    }
 }
