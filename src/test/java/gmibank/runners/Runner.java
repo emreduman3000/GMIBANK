@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources",
         glue="gmibank/stepdefinitions",
-        tags ="@api",
+        tags ="  @customerDataTest",
         dryRun=false
 
 )
