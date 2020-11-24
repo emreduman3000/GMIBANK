@@ -1,11 +1,11 @@
+
 @AllStates
 Feature: read,create,delete and update all states
 
   Background: read all states
-    Given user sets all states to response using "https://www.gmibank.com/api/tp-states"
+    Given user sets all states to response by using "https://www.gmibank.com/api/tp-states"
 
   Scenario: read all states
-    Given user deserializes all states pojo
-    And user generates all states data in correspondent files
-    Then user validates data for all states
-
+    Given users deserialize all states pojo
+    And users generate all states data in correspondent files
+    Then users validate data for all states

@@ -6,22 +6,22 @@ import io.cucumber.java.en.Then;
 
 public class US_24StepDefinitions {
 
-    @Given("user sets all states to response using {string}")
+    @Given("user sets all states to response by using {string}")
     public void userSetsAllStatesToResponseUsing(String arg0) {
 
     }
 
-    @Given("user deserializes all states pojo")
+    @Given("users deserialize all states pojo")
     public void userDeserializesAllStatesPojo() {
 
     }
 
-    @And("user generates all states data in correspondent files")
+    @And("users generate all states data in correspondent files")
     public void userGeneratesAllStatesDataInCorrespondentFiles() {
 
     }
 
-    @Then("user validates data for all states")
+    @Then("users validate data for all states")
     public void userValidatesDataForAllStates() {
     }
 }
