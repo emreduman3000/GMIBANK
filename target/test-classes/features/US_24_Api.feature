@@ -1,4 +1,3 @@
-
 @AllStates
 Feature: read,create,delete and update all states
 
@@ -9,3 +8,4 @@ Feature: read,create,delete and update all states
     Given users deserialize all states pojo
     And users generate all states data in correspondent files
     Then users validate data for all states
+
