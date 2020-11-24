@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="5" tests="5" time="0.661">
 <testcase classname="GMIBank Account Creation" name="TC1301 User can not leave the description textbox empty" time="0.084">
 <skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
@@ -42,6 +43,14 @@ And user selects account type "SAVING"......................................skip
 And user selects account status type "ACTIVE"...............................skipped
 And user clicks save button.................................................skipped
 Then verify account creation is successful..................................skipped
+=======
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="1" time="1.765">
+<testcase classname="read,create,delete and update all states" name="read all states" time="0.236">
+<skipped><![CDATA[Given user sets all states to response using "https://www.gmibank.com/api/tp-states".skipped
+Given user deserializes all states pojo.....................................undefined
+And user generates all states data in correspondent files...................skipped
+Then user validates data for all states.....................................skipped
+>>>>>>> Yesim
 ]]></skipped>
 </testcase>
 </testsuite>
