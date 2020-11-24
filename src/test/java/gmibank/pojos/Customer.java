@@ -1,22 +1,13 @@
 package gmibank.pojos;
-<<<<<<< HEAD
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
-
-=======
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-@JsonIgnoreProperties(ignoreUnknown = true)
->>>>>>> api
 public class Customer {
+
+
     private int id;
     private String firstName;
     private String lastName;
-<<<<<<< HEAD
     private String middleInitial;
-=======
-    private String midleInitial;
->>>>>>> api
     private String email;
     private String mobilePhoneNumber;
     private String phoneNumber;
@@ -27,14 +18,9 @@ public class Customer {
     private String createDate;
     private boolean zelleEnrolled;
     private Country country;
-<<<<<<< HEAD
     private  String state;
     private User user;
     private Accounts accounts;
-=======
-    private String state;
-    private User user;
->>>>>>> api
     public int getId() {
         return id;
     }
@@ -53,19 +39,11 @@ public class Customer {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-<<<<<<< HEAD
     public String getMiddleInitial() {
         return middleInitial;
     }
     public void setMiddleInitial(String middleInitial) {
         this.middleInitial = middleInitial;
-=======
-    public String getMidleInitial() {
-        return midleInitial;
-    }
-    public void setMidleInitial(String midleInitial) {
-        this.midleInitial = midleInitial;
->>>>>>> api
     }
     public String getEmail() {
         return email;
@@ -139,7 +117,6 @@ public class Customer {
     public void setUser(User user) {
         this.user = user;
     }
-<<<<<<< HEAD
     public Accounts getAccounts() {
         return accounts;
     }
@@ -147,6 +124,5 @@ public class Customer {
         this.accounts = accounts;
     }
 }
-=======
-}
->>>>>>> api
+
+
