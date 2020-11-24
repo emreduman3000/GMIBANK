@@ -19,7 +19,7 @@ public class StatesApiSteps {
 
     }
 
-    @Then("user validates data for all states")
+    @Then("user validates data for all of the states")
     public void user_validates_data_for_all_states() {
 
     }

@@ -12,7 +12,7 @@ public class ApiStepDefinitions {
     public void kullanici_kendisine_verilen_token_ile_apiye_baglanir() {
         Response response = given().headers(
                 "Authorization",
-                "Bearer " + ConfigurationReader.getProperty("token"),
+                "Bearer " + ConfigurationReader.getProperty("api_bearer_token"),
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",

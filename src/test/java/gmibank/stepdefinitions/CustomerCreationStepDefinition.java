@@ -2,12 +2,13 @@ package gmibank.stepdefinitions;
 
 import gmibank.pages.CustomerCreation;
 import gmibank.pages.LoginPage;
+import gmibank.utilities.ConfigurationReader;
+import gmibank.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -16,16 +17,21 @@ public class CustomerCreationStepDefinition {
     CustomerCreation customerCreation = new CustomerCreation();
     LoginPage loginPage = new LoginPage();
 
+    @Given("user is on the GMI Bank signin page")
+    public void userIsOnTheGMIBankSigninPage() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
+    }
     @Given("user clicks on the username textbox and enter the employee username")
     public void user_clicks_on_the_username_textbox_and_enter_the_employee_username() {
         loginPage.usernamebox.click();
         loginPage.usernamebox.sendKeys("group8employee");
     }
 
-    @Given("user clicks on the password textbox and enter the employee password")
+    @Given("user clicks on the password textbox and enter the employee password and signs in")
     public void user_clicks_on_the_password_textbox_and_enter_the_employee_password() {
         loginPage.passwordbox.click();
         loginPage.passwordbox.sendKeys("group8employee");
+        loginPage.signInButton.click();
     }
 
     @Given("user clicks on My Operations")
@@ -76,7 +82,8 @@ public class CustomerCreationStepDefinition {
     }
 
     @Then("verify if zelle enrolled is true")
-    public void verify_if_zelle_enrolled_is_true() {
+    public void verify_if_zelle_enrolled_is_true() throws InterruptedException {
+        Thread.sleep(2000);
         String valueOfZelle = customerCreation.zelle.getAttribute("value");
         Assert.assertTrue(valueOfZelle.contains("true"));
 
@@ -152,6 +159,7 @@ public class CustomerCreationStepDefinition {
 
 
     }
+
 
 
 }

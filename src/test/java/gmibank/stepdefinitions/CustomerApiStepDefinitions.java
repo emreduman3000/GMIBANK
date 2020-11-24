@@ -20,8 +20,8 @@ public class CustomerApiStepDefinitions {
     // String bearerToken= ConfigurationReader.getProperty("api_bearer_token");
     Customer[] customers;
 
-    @Given("user provides the api end point to set the response using {string}")
-    public void user_provides_the_api_end_point_to_set_the_response_using(String url) {
+    @Given("user provides api end point to set the response using {string}")
+        public void user_provides_the_api_end_point_to_set_the_response_using(String url) {
         System.out.println("Here is step1");
         response = given().headers(
                 "Authorization",
@@ -39,7 +39,7 @@ public class CustomerApiStepDefinitions {
         response.prettyPrint();
     }
 
-    @Given("manipulate all customers data")
+    @Given("manipulate all customers' data")
     public void manipulate_all_customers_data() throws Exception {
         System.out.println("Here is Step2");
 
@@ -79,7 +79,10 @@ public class CustomerApiStepDefinitions {
 
         }
     }
-}
+
+
+    }
+
 
 
 //    Response response;
