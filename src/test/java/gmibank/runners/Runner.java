@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources",
         glue="gmibank/stepdefinitions",
-        tags ="@newAccount",
-        dryRun=true
+        tags ="@AllStates",
+        dryRun=false
 
 )
 

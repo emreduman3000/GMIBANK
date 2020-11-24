@@ -4,19 +4,39 @@
     "elements": [
       {
         "line": 4,
+<<<<<<< HEAD
         "name": "user should login as an employee",
+=======
+        "name": "read all states",
+>>>>>>> Yesim
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "status": "skipped"
             },
             "line": 5,
             "name": "the user goes to gmi_login_url and signs in as an Employee",
             "match": {
               "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
+=======
+              "duration": 3000000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "user sets all states to response using \"https://www.gmibank.com/api/tp-states\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.gmibank.com/api/tp-states\"",
+                  "offset": 39
+                }
+              ],
+              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_sets_all_states_to_response_using(java.lang.String)"
+>>>>>>> Yesim
             },
             "keyword": "Given "
           },
@@ -41,16 +61,25 @@
         ]
       },
       {
+<<<<<<< HEAD
         "start_timestamp": "2020-11-21T07:50:31.126Z",
         "line": 9,
         "name": "TC1301 User can not leave the description textbox empty",
         "description": "",
         "id": "gmibank-account-creation;tc1301-user-can-not-leave-the-description-textbox-empty",
+=======
+        "start_timestamp": "2020-11-24T13:49:35.020Z",
+        "line": 7,
+        "name": "read all states",
+        "description": "",
+        "id": "read-create-delete-and-update-all-states;read-all-states",
+>>>>>>> Yesim
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "status": "skipped"
             },
             "line": 10,
@@ -246,6 +275,24 @@
             "name": "the user goes to gmi_login_url and signs in as an Employee",
             "match": {
               "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
+=======
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user deserializes all states pojo",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "user generates all states data in correspondent files",
+            "match": {
+              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_generates_all_states_data_in_correspondent_files()"
+>>>>>>> Yesim
             },
             "keyword": "Given "
           },
@@ -292,18 +339,29 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "status": "skipped"
             },
             "line": 23,
             "name": "verify all options are seen on the employee dropdown",
             "match": {
               "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_all_options_are_seen_on_the_employee_dropdown()"
+=======
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "user validates data for all states",
+            "match": {
+              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_validates_data_for_all_states()"
+>>>>>>> Yesim
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
+<<<<<<< HEAD
             "name": "@newAccount"
           }
         ]
@@ -450,10 +508,14 @@
         "tags": [
           {
             "name": "@newAccount"
+=======
+            "name": "@AllStates"
+>>>>>>> Yesim
           }
         ]
       }
     ],
+<<<<<<< HEAD
     "name": "GMIBank Account Creation",
     "description": "",
     "id": "gmibank-account-creation",
@@ -462,6 +524,16 @@
     "tags": [
       {
         "name": "@newAccount",
+=======
+    "name": "read,create,delete and update all states",
+    "description": "",
+    "id": "read-create-delete-and-update-all-states",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/US_24_Api.feature",
+    "tags": [
+      {
+        "name": "@AllStates",
+>>>>>>> Yesim
         "type": "Tag",
         "location": {
           "line": 1,

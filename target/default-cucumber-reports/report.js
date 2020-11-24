@@ -1,20 +1,35 @@
+<<<<<<< HEAD
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/newAccount.feature");
 formatter.feature({
   "name": "GMIBank Account Creation",
+=======
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/US_24_Api.feature");
+formatter.feature({
+  "name": "read,create,delete and update all states",
+>>>>>>> Yesim
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
+<<<<<<< HEAD
       "name": "@newAccount"
+=======
+      "name": "@AllStates"
+>>>>>>> Yesim
     }
   ]
 });
 formatter.background({
+<<<<<<< HEAD
   "name": "user should login as an employee",
+=======
+  "name": "read all states",
+>>>>>>> Yesim
   "description": "",
   "keyword": "Background"
 });
 formatter.step({
+<<<<<<< HEAD
   "name": "the user goes to gmi_login_url and signs in as an Employee",
   "keyword": "Given "
 });
@@ -225,10 +240,24 @@ formatter.result({
 });
 formatter.scenario({
   "name": "TC1304 User can select an employee from the drop-down",
+=======
+  "name": "user sets all states to response using \"https://www.gmibank.com/api/tp-states\"",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "gmibank.stepdefinitions.StatesApiStepDef.user_sets_all_states_to_response_using(java.lang.String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.scenario({
+  "name": "read all states",
+>>>>>>> Yesim
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
+<<<<<<< HEAD
       "name": "@newAccount"
     }
   ]
@@ -302,6 +331,9 @@ formatter.examples({
         "SAVING",
         "ACTIVE"
       ]
+=======
+      "name": "@AllStates"
+>>>>>>> Yesim
     }
   ]
 });
@@ -367,6 +399,7 @@ formatter.result({
   "status": "skipped"
 });
 formatter.step({
+<<<<<<< HEAD
   "name": "user selects account type \"SAVING\"",
   "keyword": "And "
 });
@@ -382,8 +415,14 @@ formatter.step({
 });
 formatter.match({
   "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_selects_account_status_type(java.lang.String)"
+=======
+  "name": "user deserializes all states pojo",
+  "keyword": "Given "
+>>>>>>> Yesim
 });
+formatter.match({});
 formatter.result({
+<<<<<<< HEAD
   "status": "skipped"
 });
 formatter.step({
@@ -392,16 +431,34 @@ formatter.step({
 });
 formatter.match({
   "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_clicks_save_button()"
+=======
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user generates all states data in correspondent files",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "gmibank.stepdefinitions.StatesApiStepDef.user_generates_all_states_data_in_correspondent_files()"
+>>>>>>> Yesim
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.step({
+<<<<<<< HEAD
   "name": "verify account creation is successful",
   "keyword": "Then "
 });
 formatter.match({
   "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_account_creation_is_successful()"
+=======
+  "name": "user validates data for all states",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "gmibank.stepdefinitions.StatesApiStepDef.user_validates_data_for_all_states()"
+>>>>>>> Yesim
 });
 formatter.result({
   "status": "skipped"
