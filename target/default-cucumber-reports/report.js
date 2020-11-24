@@ -1,80 +1,65 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/LoginNegative.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/US_24_Api.feature");
 formatter.feature({
-  "name": "Login negative",
+  "name": "read,create,delete and update all states",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@loginNegative"
+      "name": "@AllStates"
     }
   ]
 });
 formatter.background({
-  "name": "user is on the login page",
+  "name": "read all states",
   "description": "",
   "keyword": "Background"
 });
 formatter.step({
-  "name": "user is on the login page",
+  "name": "user sets all states to response using \"https://www.gmibank.com/api/tp-states\"",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_is_on_the_login_page()"
+  "location": "gmibank.stepdefinitions.StatesApiStepDef.user_sets_all_states_to_response_using(java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
-  "name": "Login page should not be accessible with invalid username",
+  "name": "read all states",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@loginNegative"
-    },
-    {
-      "name": "@Negative1"
+      "name": "@AllStates"
     }
   ]
 });
 formatter.step({
-  "name": "user clicks on the username textbox and text invalid username",
+  "name": "user deserializes all states pojo",
+  "keyword": "Given "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "user generates all states data in correspondent files",
   "keyword": "And "
 });
 formatter.match({
-  "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_username_textbox_and_text_invalid_username()"
+  "location": "gmibank.stepdefinitions.StatesApiStepDef.user_generates_all_states_data_in_correspondent_files()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.step({
-  "name": "user clicks on the password textbox and text valid password",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_password_textbox_and_text_valid_password()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user clicks on the sign in button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_clicks_on_the_sign_in_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "user verify the error message",
+  "name": "user validates data for all states",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_error_message()"
+  "location": "gmibank.stepdefinitions.StatesApiStepDef.user_validates_data_for_all_states()"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 });

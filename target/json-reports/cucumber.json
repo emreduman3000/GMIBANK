@@ -4,101 +4,89 @@
     "elements": [
       {
         "line": 4,
-        "name": "user is on the login page",
+        "name": "read all states",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 13834000000,
-              "status": "passed"
+              "duration": 3000000,
+              "status": "skipped"
             },
             "line": 5,
-            "name": "user is on the login page",
+            "name": "user sets all states to response using \"https://www.gmibank.com/api/tp-states\"",
             "match": {
-              "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_is_on_the_login_page()"
+              "arguments": [
+                {
+                  "val": "\"https://www.gmibank.com/api/tp-states\"",
+                  "offset": 39
+                }
+              ],
+              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_sets_all_states_to_response_using(java.lang.String)"
             },
             "keyword": "Given "
           }
         ]
       },
       {
-        "start_timestamp": "2020-11-16T23:24:39.038Z",
-        "line": 8,
-        "name": "Login page should not be accessible with invalid username",
+        "start_timestamp": "2020-11-24T13:49:35.020Z",
+        "line": 7,
+        "name": "read all states",
         "description": "",
-        "id": "login-negative;login-page-should-not-be-accessible-with-invalid-username",
+        "id": "read-create-delete-and-update-all-states;read-all-states",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 125000000,
-              "status": "passed"
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "user deserializes all states pojo",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 9,
-            "name": "user clicks on the username textbox and text invalid username",
+            "name": "user generates all states data in correspondent files",
             "match": {
-              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_username_textbox_and_text_invalid_username()"
+              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_generates_all_states_data_in_correspondent_files()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 187000000,
-              "status": "passed"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 10,
-            "name": "user clicks on the password textbox and text valid password",
+            "name": "user validates data for all states",
             "match": {
-              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_clicks_on_the_password_textbox_and_text_valid_password()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 106000000,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "user clicks on the sign in button",
-            "match": {
-              "location": "gmibank.stepdefinitions.LoginTestStepdefinitions.user_clicks_on_the_sign_in_button()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3056000000,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "user verify the error message",
-            "match": {
-              "location": "gmibank.stepdefinitions.LoginTestNegativeStepDef.user_verify_the_error_message()"
+              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_validates_data_for_all_states()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@loginNegative"
-          },
-          {
-            "name": "@Negative1"
+            "name": "@AllStates"
           }
         ]
       }
     ],
-    "name": "Login negative",
+    "name": "read,create,delete and update all states",
     "description": "",
-    "id": "login-negative",
+    "id": "read-create-delete-and-update-all-states",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/LoginNegative.feature",
+    "uri": "file:src/test/resources/features/US_24_Api.feature",
     "tags": [
       {
-        "name": "@loginNegative",
+        "name": "@AllStates",
         "type": "Tag",
         "location": {
           "line": 1,

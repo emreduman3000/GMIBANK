@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.063">
-<testcase classname="Login negative" name="Login page should not be accessible with invalid username" time="17.432">
-<system-out><![CDATA[Given user is on the login page.............................................passed
-And user clicks on the username textbox and text invalid username...........passed
-And user clicks on the password textbox and text valid password.............passed
-And user clicks on the sign in button.......................................passed
-Then user verify the error message..........................................passed
-]]></system-out>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="1" time="1.765">
+<testcase classname="read,create,delete and update all states" name="read all states" time="0.236">
+<skipped><![CDATA[Given user sets all states to response using "https://www.gmibank.com/api/tp-states".skipped
+Given user deserializes all states pojo.....................................undefined
+And user generates all states data in correspondent files...................skipped
+Then user validates data for all states.....................................skipped
+]]></skipped>
 </testcase>
 </testsuite>
