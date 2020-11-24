@@ -8,15 +8,11 @@ import gmibank.utilities.WriteToTxt;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
-
 import io.restassured.response.Response;
-import org.checkerframework.checker.units.qual.C;
-import org.junit.Assert;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.*;
-
+import static io.restassured.RestAssured.given;
 public class CustomerApiStepDefinitions {
 
     Response response;
@@ -24,8 +20,8 @@ public class CustomerApiStepDefinitions {
     // String bearerToken= ConfigurationReader.getProperty("api_bearer_token");
     Customer[] customers;
 
-    @Given("user provides the api end point to set the response using {string}")
-    public void user_provides_the_api_end_point_to_set_the_response_using(String url) {
+    @Given("user provides api end point to set the response using {string}")
+        public void user_provides_the_api_end_point_to_set_the_response_using(String url) {
         System.out.println("Here is step1");
         response = given().headers(
                 "Authorization",
@@ -43,7 +39,7 @@ public class CustomerApiStepDefinitions {
         response.prettyPrint();
     }
 
-    @Given("manipulate all customers data")
+    @Given("manipulate all customers' data")
     public void manipulate_all_customers_data() throws Exception {
         System.out.println("Here is Step2");
 
@@ -83,4 +79,46 @@ public class CustomerApiStepDefinitions {
 
         }
     }
-}
+
+
+    }
+
+
+
+//    Response response;
+//    String filePath = ConfigurationReader.getProperty("filePath_Customer");
+//    String bearerToken = ConfigurationReader.getProperty("api_bearer_token");
+//    Customer[] customers;
+//    @Given("user sets all response using api end point {string}")
+//    public void user_sets_all_response_using_api_end_point(String url) {
+//        System.out.println("Here is the stpe1");
+//        response = given().headers(
+//                "Authorization",
+//                "Bearer " + bearerToken,
+//                "Content-Type",
+//                ContentType.JSON,
+//                "Accept",
+//                ContentType.JSON)
+//                .when()
+//                .get(url)
+//                .then()
+//                .contentType(ContentType.JSON)
+//                .extract()
+//                .response();
+//        response.prettyPrint();
+//    }
+//    @Given("user deserializes country data as json to java pojo")
+//    public void user_deserializes_country_data_as_json_to_java_pojo()throws Exception {
+//        System.out.println("Here is the stpe2");
+//        ObjectMapper obj = new  ObjectMapper();
+//        customers = obj.readValue(response.asString(), Customer[].class);
+//        for(int i=0; i<customers.length;i++ ){
+//            if(customers[i].getUser() != null)
+//                System.out.println("id: "+ customers[i].getUser().getFirstName());
+//        }
+//    }
+//    @Then("user validates the data")
+//    public void user_validates_the_data() {
+//        System.out.println("Here is the stpe3");
+////        WriteToTxt.returnCustomerSNN(filePath,customers[10]);
+//    }

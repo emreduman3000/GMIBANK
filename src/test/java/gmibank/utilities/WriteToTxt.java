@@ -3,25 +3,22 @@ package gmibank.utilities;
 import gmibank.pojos.Customer;
 import gmibank.pojos.States;
 import io.restassured.path.json.JsonPath;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
 
-public class WriteToTxt {
 
-    JsonPath json;
-    public static void saveDataInFile(String fileName, Customer[] customers) {
+public class WriteToTxt {
+    public static void saveDataInFile(String fileName, Customer[] customers)  {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
-            for (int i = 0; i < customers.length; i++)
-                writer.append(customers[i].getSsn() + ",\n");
+            for (int i=0;i<customers.length;i++)
+                writer.append(customers[i].getSsn()+",\n");
             writer.close();
-        } catch (Exception e) {
+        } catch(Exception e){
         }
     }
-
-    public static void saveDataInFileWithSSN(String fileName, Customer customer) {
+    public static void saveDataInFileWithSSN(String fileName, Customer customer)  {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
             writer.append(customer.getSsn());
@@ -29,12 +26,13 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+    public static void saveDataInFileWithUserInfo(String fileName, Customer customer)  {
 
-    public static void saveDataInFileWithUserInfo(String fileName, Customer customer) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
             writer.append(customer.getUser().getFirstName());
             writer.close();
+
         } catch (Exception e) {
         }
     }
@@ -75,6 +73,4 @@ public class WriteToTxt {
         }
     }
 }
-
-
 

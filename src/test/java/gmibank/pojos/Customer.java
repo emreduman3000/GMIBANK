@@ -1,9 +1,9 @@
 package gmibank.pojos;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
-
 public class Customer {
+
+
     private int id;
     private String firstName;
     private String lastName;
@@ -124,3 +124,5 @@ public class Customer {
         this.accounts = accounts;
     }
 }
+
+

@@ -3,7 +3,8 @@ Feature: GMI Bank new Customer creation
 
   Scenario: TC 01_ User should create a new customer by filling out the required fields
     Given user is on the GMI Bank signin page
-    And enter correct username and password
+    And user clicks on the username textbox and enter the employee username
+    And user clicks on the password textbox and enter the employee password and signs in
     Given user clicks on My Operations
     And click on Manage Customers
     And click on Create a new Customer

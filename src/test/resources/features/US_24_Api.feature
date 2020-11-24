@@ -9,4 +9,3 @@ Feature: read,create,delete and update all states
     And user generates all states data in correspondent files
     Then user validates data for all states
 
-

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/newAccount.feature");
 formatter.feature({
   "name": "GMIBank Account Creation",
@@ -464,3 +465,5 @@ formatter.result({
   "status": "skipped"
 });
 });
+=======
+>>>>>>> api

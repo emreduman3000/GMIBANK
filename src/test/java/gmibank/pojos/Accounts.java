@@ -1,5 +1,4 @@
 package gmibank.pojos;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -13,12 +12,8 @@ public class Accounts {
 
     public void setUnknown(String unknown) {
         this.unknown = unknown;
-    }
+    }}
 
 
 
 
-
-
-
-}
