@@ -2,6 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
 <modelVersion>4.0.0</modelVersion>
 
 <groupId>org.example</groupId>
@@ -88,11 +90,9 @@
         <artifactId>rest-assured</artifactId>
         <version>4.3.0</version>
     </dependency>
+ <build>
+     <plugins>
 
-</dependencies>
-
-<build>
-    <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
@@ -101,13 +101,11 @@
                     <executable>C:\Program Files\Java\jdk1.8.0_221\bin\javac.exe</executable>
                 </configuration>
             </plugin>
-
             <plugin>
                 <!-- paralel  test yaprken bircok test farklı farklı browserlarda olabilir, b,r,s, fail olunca hepsi durmasın diye devam etsin diye kullanılan plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>3.0.0-M1</version>
-
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
@@ -115,14 +113,11 @@
                         <include>**/runners/*TestRunner*.java</include> <!--** tüm frameworkün icinde runners package ını sec - *TestRunner* bası sonu farklı olabilir ama icinde TestRunner olan classalrı sec-->
                     </includes>
                 </configuration>
-
             </plugin>
-
             <plugin><!-- parallel test içiçn gerekli plugin -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
-
                 <configuration>
                     <parallel>classes</parallel> <!-- parallel testi gösterir-->
                     <forkMode>perthread</forkMode>
@@ -138,9 +133,7 @@
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
-
             </plugin>
-
             <plugin> <!-- cucumber reportlarını almak ıcın kullandıgımız plugin-->
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
@@ -166,9 +159,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-         </plugins>
+        </plugins>
     </build>
 </project>
-
-

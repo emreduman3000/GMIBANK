@@ -1,6 +1,4 @@
 package gmibank.utilities;
-
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,10 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -146,6 +141,18 @@ public class Driver
             }
         }
         return null;
+    }
+
+    public static void waitAndSelect(WebElement element, String text, int timeout){
+        for (int i = 0; i < timeout; i++) {
+            try {
+                Select select = new Select(element);
+                select.selectByVisibleText(text);
+                return;
+            } catch (WebDriverException e) {
+                waitFor(1);
+            }
+        }
     }
 
 

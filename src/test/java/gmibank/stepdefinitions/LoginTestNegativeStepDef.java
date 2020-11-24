@@ -24,7 +24,7 @@ public class LoginTestNegativeStepDef {
     @Then("user verify the error message")
     public void user_verify_the_error_message() {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -67,8 +67,7 @@ public class LoginTestNegativeStepDef {
 
     @Then("user verify the success message")
     public void user_verify_the_success_message() {
-
-Driver.waitForVisibility((loginPage.verifyMessage),5);
+        Driver.waitForVisibility((loginPage.verifyMessage),5);
 
 
     }
