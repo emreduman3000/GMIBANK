@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
 <testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="5" tests="5" time="0.661">
 <testcase classname="GMIBank Account Creation" name="TC1301 User can not leave the description textbox empty" time="0.084">
 <skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
@@ -54,3 +53,5 @@ Then user validates data for all states.....................................skip
 ]]></skipped>
 </testcase>
 </testsuite>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="0.044"/>
+

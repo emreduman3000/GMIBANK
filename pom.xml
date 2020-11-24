@@ -2,8 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
-
 <modelVersion>4.0.0</modelVersion>
 
 <groupId>org.example</groupId>
@@ -118,20 +116,22 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.example</groupId>
+    <artifactId>gmibank</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <parallel>classes</parallel> <!-- parallel testi gösterir-->
-                    <forkMode>perthread</forkMode>
-                    <threadCount>4</threadCount> <!-- 2 testi 2 farklı browserda aynı anda calıstır - 2 tane varsa 2 tanesi için calısır - yani max 4-->
-                    <reuseForks>false</reuseForks>
-                    <argLine>-Duser.language=en</argLine>
-                    <argLine>-Xmx1024m</argLine>
-                    <argLine>-XX:MaxPermSize=256m</argLine>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                    <useFile>false</useFile>
-                    <includes>
-                        <include>**/runners/*Test*.java</include>
-                    </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <plugin> <!-- cucumber reportlarını almak ıcın kullandıgımız plugin-->

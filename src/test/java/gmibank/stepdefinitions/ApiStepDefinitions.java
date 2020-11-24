@@ -1,5 +1,4 @@
 package gmibank.stepdefinitions;
-
 import gmibank.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
