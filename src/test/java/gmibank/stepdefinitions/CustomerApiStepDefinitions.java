@@ -3,24 +3,16 @@ package gmibank.stepdefinitions;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import gmibank.pojos.Customer;
 import gmibank.utilities.ConfigurationReader;
-<<<<<<< HEAD
 import gmibank.utilities.ReadTxt;
-=======
->>>>>>> api
 import gmibank.utilities.WriteToTxt;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
-<<<<<<< HEAD
-
 import io.restassured.response.Response;
-import org.checkerframework.checker.units.qual.C;
-import org.junit.Assert;
 
 import java.util.List;
 
-import static io.restassured.RestAssured.*;
-
+import static io.restassured.RestAssured.given;
 public class CustomerApiStepDefinitions {
 
     Response response;
@@ -34,20 +26,6 @@ public class CustomerApiStepDefinitions {
         response = given().headers(
                 "Authorization",
                 "Bearer " + ConfigurationReader.getProperty("api_bearer_token"),
-=======
-import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.given;
-public class CustomerApiStepDefinitions {
-
-    Customer[] customers;
-    Response response;
-    @Given("user provides api end point to set the response using {string}")
-    public void user_provides_the_api_end_point_to_set_the_response(String url) throws Exception{
-        response = given().headers(
-                "Authorization",
-                "Bearer " +ConfigurationReader.getProperty("token"),
->>>>>>> api
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",
@@ -58,7 +36,6 @@ public class CustomerApiStepDefinitions {
                 .contentType(ContentType.JSON)
                 .extract()
                 .response();
-<<<<<<< HEAD
         response.prettyPrint();
     }
 
@@ -103,34 +80,8 @@ public class CustomerApiStepDefinitions {
         }
     }
 }
-=======
-    }
-    @Given("manipulate all customers' data")
-    public void manipulate_all_costumers_data()throws  Exception{
-        ObjectMapper obj = new ObjectMapper();
-        customers = obj.readValue(response.asString(), Customer[].class);
-        for(int i=0; i<customers.length; i++) {
-            if (customers[i].getLastName() != null) {
-                System.out.println(customers[i].getLastName());
-            }
-        }
-    }
-    @Given("user sets the data in correspondent files")
-    public void user_sets_the_data_in_corresponding_files() {
-        //WriteToTxt.saveDataInFile("allCustomerData.txt", customer);
-        WriteToTxt.saveDataInFile("NewFile.txt", customers);
-    }
-    @Then("user validates all data")
-    public void user_validates_all_data() {
-//      List<Customer> list = ReadTxt.returnCustomerSNN("NewFile");
-//
-//      int count = 0;
-//        String expected = "123-47-2476";
-//      for(int i=0; i<list.size(); i++){
-//        System.out.println(list.get(i).getSsn());
-//        }
-    }
-}
+
+
 //    Response response;
 //    String filePath = ConfigurationReader.getProperty("filePath_Customer");
 //    String bearerToken = ConfigurationReader.getProperty("api_bearer_token");
@@ -168,5 +119,3 @@ public class CustomerApiStepDefinitions {
 //        System.out.println("Here is the stpe3");
 ////        WriteToTxt.returnCustomerSNN(filePath,customers[10]);
 //    }
-
->>>>>>> api
