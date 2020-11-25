@@ -16,7 +16,7 @@ public class US_24StepDefinitions {
 
     }
 
-    @And("user generates all states data in correspondent files")
+    @And("user generates all  states data in correspondent files")
     public void userGeneratesAllStatesDataInCorrespondentFiles() {
 
     }

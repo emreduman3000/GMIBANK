@@ -6,7 +6,7 @@ Feature: read,create,delete and update all states
 
   Scenario: read all states
     Given user deserializes all states pojo
-    And user generates all states data in correspondent files
-    Then user validates data for all states
+    And user generates all of the states data in correspondent files
+    Then user validates data for all of the states
 
 
