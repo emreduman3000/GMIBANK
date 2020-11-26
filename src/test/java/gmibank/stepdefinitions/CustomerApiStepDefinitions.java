@@ -40,6 +40,7 @@ public class CustomerApiStepDefinitions {
                 .contentType(ContentType.JSON)
                 .extract()
                 .response();
+
         response.prettyPrint();
     }
 
@@ -57,6 +58,7 @@ public class CustomerApiStepDefinitions {
 
         @Given("user sets the data in correspondent files")
         public void user_sets_the_data_in_correspondent_files() {
+            System.out.println("Here is Step3");
             //  WriteToTxt.saveDataInFileWithAllCustomerInfo("AllCustomerData.txt",customers);
             WriteToTxt.saveDataInFile("NewFile.txt", customers);
 
@@ -64,6 +66,7 @@ public class CustomerApiStepDefinitions {
 
         @Then("user validates all data")
         public void user_validates_all_data() {
+            System.out.println("Here is Step4");
 
             List<Customer> list = ReadTxt.returnCustomerSNN("NewFile.txt");
             Customer customer = new Customer();

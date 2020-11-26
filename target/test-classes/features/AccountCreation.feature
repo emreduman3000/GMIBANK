@@ -28,9 +28,14 @@ Feature: GMIBank Account Creation
     And user selects account status type "<accountStatus>"
     And user clicks save button
     Then verify account creation is successful
+    And user clicks on userIcon
+    And user clicks on sign out button
 
     Examples: Test Data
     |description|balance|accountType|accountStatus|
-    |btl saving |1000   |SAVING     |ACTIVE       |
+    |BTL saving |1000   |SAVING     |ACTIVE       |
+    |BTL checking|2000  |CHECKING   |ACTIVE       |
+    |BTL credit  |100   |CREDIT_CARD|CLOSED       |
+    |BTL investing|20000|INVESTING  |ACTIVE       |
 
 

@@ -7,12 +7,12 @@ Feature: system should allow to read all customers info using api end point
   @TC_2001
   Scenario: TC_2001 read all customers you created and validate them from your data set
     And find out how many customers are and verify that there are 20 customers
-    And get all the information of the seventh customer
-    And verify seventh customers ssn is "888-88-8888" and country name is "UNITED STATES"
+    And get all the information of the 3th customer
+    And verify 3rd customers ssn and country name
 
   @TC_2002
   Scenario: TC_2002 read all customers you created and validate them 1 by 1
-    And verify first customer's firstName "emre"
-    And verify second customer's lastName "John"
-    And verify fifth customer's country "GERMANY"
-    And verify last customer's user email "group8user@gmail.com"
+    And verify first customer's firstName "John"
+    And verify second customer's lastName "ishak"
+    And verify fifth customer's country "UNITED STATES"
+    And verify last customer's user email "heygidigunler@gmail.com"
