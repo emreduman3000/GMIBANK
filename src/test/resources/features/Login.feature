@@ -10,6 +10,8 @@ Feature: login page feature
     And user clicks on the password textbox and text "<valid password>"
     And user clicks on the sign in button
     Then user verify to login
+    And user clicks on userIcon
+    And user clicks on sign out button
 
     Examples:
       | valid username | valid password |
