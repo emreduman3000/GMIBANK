@@ -14,42 +14,29 @@ import java.sql.Connection;
 
 public class DatabaseUtility
 {
+
     private static Connection connection;
     private static Statement statement;
     private static ResultSet resultSet;
-    //BU METHOD COK KULLANACAGIZ
-    //createConnection database e baglanmak icin. Burda url, username, password u kullanarak database baglaniyoruz
-    //Database e ne zaman baglanmak isterse bu methodu cagrabiliriz
-    //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
     public static void createConnection() {
-        String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=kaolapalacedb;user=Ahmet_User;password=Ahmet123!;allowMultiQueries=true";
-        String username="Ahmet_User";
-        String password="Ahmet123!";
+        String url = ConfigurationReader.getProperty("database_url");
+        String user = ConfigurationReader.getProperty("database_user");
+        String password = "Techpro_@126";
         try {
-            connection = DriverManager.getConnection(url, username, password);
+            connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
-    //BU METHODU COK KULLANACAGIZ
-    //Bu method DatabaDBUTilsse e baglandiktan sonra Yazilan query yi calistirmak icin
-    //Bu method da statement ve resultset objesini olusturup query run ediyoruz
-    public static void executeQuery(String query) {
+    public static void createConnection(String url, String user, String password) {
         try {
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        try {
-            resultSet = statement.executeQuery(query);
+            connection = DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
-    //Database baglantisini sonlandirmak icin. Bu Mehtod u test tamamladiktan sonra kullaniriz
     public static void closeConnection() {
         try {
             if (resultSet != null) {
@@ -65,50 +52,9 @@ public class DatabaseUtility
             e.printStackTrace();
         }
     }
-    //Sonraki 3 methodu sadece connection,statement,resultset kullanmak istedigimizde kullaniriz
-    //connection =>DBUtils.getConnection()
-    //statement => DBUtils.getResultset()
-    //resultSet => DBUtils.getResultset()
-    //getStatement method statement object i olusturmak icin
-    public static Statement getStatement() {
-        try {
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return statement;
-    }
-    //getConnection method Connection object i olusturmak icin. Bu method create createConnectiondan farkli olarak connection objesi return ediyor
-    public static Connection getConnection() {
-        String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=kaolapalacedb;user=Ahmet_User;password=Ahmet123!";
-        String username="Ahmet_User";
-        String password="Ahmet123!";
-        try {
-            connection = DriverManager.getConnection(url, username, password);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return connection;
-    }
-    //getResultset method Resultset object i olusturmak icin.
-    public static ResultSet getResultset() {
-        try {
-            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return resultSet;
-    }
-    //Table da kac satir var
-    public static int getRowCount() throws Exception {
-        resultSet.last();
-        int rowCount = resultSet.getRow();
-        return rowCount;
-    }
     /**
+     *
+     * @param query
      * @return returns a single cell value. If the results in multiple rows and/or
      *         columns of data, only first column of the first row will be returned.
      *         The rest of the data will be ignored
@@ -117,6 +63,8 @@ public class DatabaseUtility
         return getQueryResultList(query).get(0).get(0);
     }
     /**
+     *
+     * @param query
      * @return returns a list of Strings which represent a row of data. If the query
      *         results in multiple rows and/or columns of data, only first row will
      *         be returned. The rest of the data will be ignored
@@ -125,6 +73,8 @@ public class DatabaseUtility
         return getQueryResultList(query).get(0);
     }
     /**
+     *
+     * @param query
      * @return returns a map which represent a row of data where key is the column
      *         name. If the query results in multiple rows and/or columns of data,
      *         only first row will be returned. The rest of the data will be ignored
@@ -133,6 +83,8 @@ public class DatabaseUtility
         return getQueryResultMap(query).get(0);
     }
     /**
+     *
+     * @param query
      * @return returns query result in a list of lists where outer list represents
      *         collection of rows and inner lists represent a single row
      */
@@ -156,6 +108,9 @@ public class DatabaseUtility
         return rowList;
     }
     /**
+     *
+     * @param query
+     * @param column
      * @return list of values of a single column from the result set
      */
     public static List<Object> getColumnData(String query, String column) {
@@ -174,6 +129,8 @@ public class DatabaseUtility
         return rowList;
     }
     /**
+     *
+     * @param query
      * @return returns query result in a list of maps where the list represents
      *         collection of rows and a map represents represent a single row with
      *         key being the column name
@@ -197,14 +154,15 @@ public class DatabaseUtility
         }
         return rowList;
     }
-    /*
+    /**
+     *
+     * @param query
      * @return List of columns returned in result set
      */
     public static List<String> getColumnNames(String query) {
         executeQuery(query);
         List<String> columns = new ArrayList<>();
         ResultSetMetaData rsmd;
-
         try {
             rsmd = resultSet.getMetaData();
             int columnCount = rsmd.getColumnCount();
@@ -212,8 +170,264 @@ public class DatabaseUtility
                 columns.add(rsmd.getColumnName(i));
             }
         } catch (SQLException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return columns;
     }
+    public static void executeQuery(String query) {
+        try {
+            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        try {
+            resultSet = statement.executeQuery(query);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public static int getRowCount() throws Exception {
+        resultSet.last();
+        int rowCount = resultSet.getRow();
+        return rowCount;
+    }
+    public static void insertCountry(String  countryName){
+    }
+    public static void executeInsertion(String query) {
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        try {
+            boolean done = statement.execute(query);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    public static int getMaxCountryId (String query,String column){
+        int max = 0;
+        List<Object> allIds = getColumnData(query, column);
+        for (int i=0; i<allIds.size();i++){
+            int num = Integer.parseInt(allIds.get(i).toString().trim());
+            if(max <= num)
+                max=num;
+        }
+        return max;
+    }
+    public static void main(String[] args) {
+        createConnection("jdbc:postgresql://157.230.48.97:5432/gmibank_db","techprodb_user","Techpro_@126");
+
+    }
 }
+//    private static Connection connection;
+//    private static Statement statement;
+//    private static ResultSet resultSet;
+//
+//
+//    //BU METHOD COK KULLANACAGIZ
+//    //createConnection database e baglanmak icin. Burda url, username, password u kullanarak database baglaniyoruz
+//    //Database e ne zaman baglanmak isterse bu methodu cagrabiliriz
+//    //Bu method u data cok BeforeMethod icinde setup icin kullanacagiz
+//    public static void createConnection() {
+//        String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=kaolapalacedb;user=Ahmet_User;password=Ahmet123!;allowMultiQueries=true";
+//        String username="Ahmet_User";
+//        String password="Ahmet123!";
+//        try {
+//            connection = DriverManager.getConnection(url, username, password);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
+//    //BU METHODU COK KULLANACAGIZ
+//    //Bu method DatabaDBUTilsse e baglandiktan sonra Yazilan query yi calistirmak icin
+//    //Bu method da statement ve resultset objesini olusturup query run ediyoruz
+//    public static void executeQuery(String query) {
+//        try {
+//            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        try {
+//            resultSet = statement.executeQuery(query);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//    }
+//    //Database baglantisini sonlandirmak icin. Bu Mehtod u test tamamladiktan sonra kullaniriz
+//    public static void closeConnection() {
+//        try {
+//            if (resultSet != null) {
+//                resultSet.close();
+//            }
+//            if (statement != null) {
+//                statement.close();
+//            }
+//            if (connection != null) {
+//                connection.close();
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//    //Sonraki 3 methodu sadece connection,statement,resultset kullanmak istedigimizde kullaniriz
+//    //connection =>DBUtils.getConnection()
+//    //statement => DBUtils.getResultset()
+//    //resultSet => DBUtils.getResultset()
+//    //getStatement method statement object i olusturmak icin
+//    public static Statement getStatement() {
+//        try {
+//            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return statement;
+//    }
+//    //getConnection method Connection object i olusturmak icin. Bu method create createConnectiondan farkli olarak connection objesi return ediyor
+//    public static Connection getConnection() {
+//        String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=kaolapalacedb;user=Ahmet_User;password=Ahmet123!";
+//        String username="Ahmet_User";
+//        String password="Ahmet123!";
+//        try {
+//            connection = DriverManager.getConnection(url, username, password);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return connection;
+//    }
+//    //getResultset method Resultset object i olusturmak icin.
+//    public static ResultSet getResultset() {
+//        try {
+//            statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return resultSet;
+//    }
+//    //Table da kac satir var
+//    public static int getRowCount() throws Exception {
+//        resultSet.last();
+//        int rowCount = resultSet.getRow();
+//        return rowCount;
+//    }
+//    /**
+//     * @return returns a single cell value. If the results in multiple rows and/or
+//     *         columns of data, only first column of the first row will be returned.
+//     *         The rest of the data will be ignored
+//     */
+//    public static Object getCellValue(String query) {
+//        return getQueryResultList(query).get(0).get(0);
+//    }
+//    /**
+//     * @return returns a list of Strings which represent a row of data. If the query
+//     *         results in multiple rows and/or columns of data, only first row will
+//     *         be returned. The rest of the data will be ignored
+//     */
+//    public static List<Object> getRowList(String query) {
+//        return getQueryResultList(query).get(0);
+//    }
+//    /**
+//     * @return returns a map which represent a row of data where key is the column
+//     *         name. If the query results in multiple rows and/or columns of data,
+//     *         only first row will be returned. The rest of the data will be ignored
+//     */
+//    public static Map<String, Object> getRowMap(String query) {
+//        return getQueryResultMap(query).get(0);
+//    }
+//    /**
+//     * @return returns query result in a list of lists where outer list represents
+//     *         collection of rows and inner lists represent a single row
+//     */
+//    public static List<List<Object>> getQueryResultList(String query) {
+//        executeQuery(query);
+//        List<List<Object>> rowList = new ArrayList<>();
+//        ResultSetMetaData rsmd;
+//        try {
+//            rsmd = resultSet.getMetaData();
+//            while (resultSet.next()) {
+//                List<Object> row = new ArrayList<>();
+//                for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+//                    row.add(resultSet.getObject(i));
+//                }
+//                rowList.add(row);
+//            }
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return rowList;
+//    }
+//    /**
+//     * @return list of values of a single column from the result set
+//     */
+//    public static List<Object> getColumnData(String query, String column) {
+//        executeQuery(query);
+//        List<Object> rowList = new ArrayList<>();
+//        ResultSetMetaData rsmd;
+//        try {
+//            rsmd = resultSet.getMetaData();
+//            while (resultSet.next()) {
+//                rowList.add(resultSet.getObject(column));
+//            }
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return rowList;
+//    }
+//    /**
+//     * @return returns query result in a list of maps where the list represents
+//     *         collection of rows and a map represents represent a single row with
+//     *         key being the column name
+//     */
+//    public static List<Map<String, Object>> getQueryResultMap(String query) {
+//        executeQuery(query);
+//        List<Map<String, Object>> rowList = new ArrayList<>();
+//        ResultSetMetaData rsmd;
+//        try {
+//            rsmd = resultSet.getMetaData();
+//            while (resultSet.next()) {
+//                Map<String, Object> colNameValueMap = new HashMap<>();
+//                for (int i = 1; i <= rsmd.getColumnCount(); i++) {
+//                    colNameValueMap.put(rsmd.getColumnName(i), resultSet.getObject(i));
+//                }
+//                rowList.add(colNameValueMap);
+//            }
+//        } catch (SQLException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        return rowList;
+//    }
+//    /*
+//     * @return List of columns returned in result set
+//     */
+//    public static List<String> getColumnNames(String query) {
+//        executeQuery(query);
+//        List<String> columns = new ArrayList<>();
+//        ResultSetMetaData rsmd;
+//
+//        try {
+//            rsmd = resultSet.getMetaData();
+//            int columnCount = rsmd.getColumnCount();
+//            for (int i = 1; i <= columnCount; i++) {
+//                columns.add(rsmd.getColumnName(i));
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return columns;
+//    }
+//}
+
