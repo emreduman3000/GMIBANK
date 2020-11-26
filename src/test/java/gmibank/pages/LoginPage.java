@@ -35,6 +35,10 @@ public class LoginPage {
     public WebElement verifyMessage;
     @FindBy(xpath = "//h1[@id='register-title']/span")
     public WebElement registrationPage;
+    @FindBy (xpath = "//*[.='Sign out']")
+    public WebElement signOutButton;
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-user fa-w-14 ']")
+    public WebElement userIcon;
 
 // index
 }

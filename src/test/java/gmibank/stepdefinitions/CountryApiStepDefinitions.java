@@ -2,7 +2,7 @@ package gmibank.stepdefinitions;
 
 import gmibank.jsonModels.CountryJson;
 import gmibank.utilities.ConfigurationReader;
-import gmibank.utilities.WriteToText2;
+import gmibank.utilities.WriteToTxt;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
@@ -90,7 +90,7 @@ public class CountryApiStepDefinitions {
 
     @Given("user saves the countries to correspondent files")
     public void user_saves_the_countries_to_correspondent_files() {
-        WriteToText2.saveDataInFileWithJsonListMap("us_21.csv",allCountryData);
+        WriteToTxt.saveDataInFileWithJsonListMap("us_21.csv",allCountryData);
 
     }
 

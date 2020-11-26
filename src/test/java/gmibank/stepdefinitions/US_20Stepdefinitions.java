@@ -1,7 +1,6 @@
 package gmibank.stepdefinitions;
 
 import gmibank.utilities.ConfigurationReader;
-import gmibank.utilities.WriteToText2;
 import gmibank.utilities.WriteToTxt;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
@@ -59,22 +58,23 @@ public class US_20Stepdefinitions {
     @Given("find out how many customers are and verify that there are {int} customers")
     public void find_out_how_many_customers_are_and_verify_that_there_are_customers(Integer customerCount) {
         Integer actualCustumerCount =  allCustomerData.size();
+        System.out.println("number of customers: "+actualCustumerCount);
          Assert.assertEquals(customerCount,actualCustumerCount);
     }
 
-    @Given("get all the information of the seventh customer")
-    public void get_all_the_information_of_the_seventh_customer() {
-        System.out.println(allCustomerData.get(6));
-        WriteToText2.saveDataInFileWithJsonListMap("us_20.csv",allCustomerData);
+    @Given("get all the information of the 3th customer")
+    public void get_all_the_information_of_the_3th_customer() {
+        System.out.println(allCustomerData.get(2));
+        WriteToTxt.saveDataInFileWithJsonListMap("us20.csv",allCustomerData);
     }
 
-    @Given("verify seventh customers ssn is {string} and country name is {string}")
-    public void verify_seventh_customers_ssn_is_and_country_name_is(String expectedSsn, String expectedcountry) {
-     String actualSsn= allCustomerData.get(6).get("ssn").toString();
-     Assert.assertEquals(actualSsn,expectedSsn);
+    @Given("verify 3rd customers ssn and country name")
+    public void verify_3rd_customers_ssn_is_and_country_name_is() {
+     String actualSsn= allCustomerData.get(2).get("ssn").toString();
+     Assert.assertEquals(actualSsn,"219-02-1962");
 
-     String actualCountryName=json.getString("country[6].name");
-     Assert.assertEquals(expectedcountry,actualCountryName);
+     String actualCountryName=json.getString("country[2].name");
+     Assert.assertEquals(actualCountryName, "UNITED STATES");
     }
 
     @Given("verify first customer's firstName {string}")
