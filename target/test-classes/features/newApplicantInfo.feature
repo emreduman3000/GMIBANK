@@ -1,9 +1,8 @@
 @newApplicantInfo
 Feature: User should be able to search a new applicant by SSN and see all of their registration Info
   Background: user is on the url
-    Given the user goes to gmi_login_url and signs in as an Employee
-  Scenario Outline: User Information Verification Test
-
+    Given user goes to gmi_login_url and signs in
+  Scenario: User Information Verification Test
     When user navigates to My operations
     And user choose Manage Customer Option
     And user click Create a new Customer button
@@ -17,6 +16,3 @@ Feature: User should be able to search a new applicant by SSN and see all of the
     And the page displays Email info
     And the page displays Username info
 
-    Examples:
-    |
-    |

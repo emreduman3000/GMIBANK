@@ -1,7 +1,6 @@
-package gmibank.stepdefinitions;
 
+package gmibank.stepdefinitions;
 import gmibank.pages.LoginPage;
-import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,8 +10,8 @@ public class LoginTestStepdefinitions {
     LoginPage loginPage = new LoginPage();
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("loginUrl"));
-
+        //Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
+        Driver.getDriver().get("http://gmibank.com/login");
     }
 
     @Given("user clicks on the username textbox and text {string}")

@@ -10,6 +10,7 @@ Feature: login page feature
     And user clicks on the password textbox and text "<valid password>"
     And user clicks on the sign in button
     Then user verify to login
+
     Examples:
       | valid username | valid password |
       | team8          | 123qw?+.       |

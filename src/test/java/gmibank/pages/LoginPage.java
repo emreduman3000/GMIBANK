@@ -7,16 +7,21 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public LoginPage() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+    public LoginPage() { PageFactory.initElements(Driver.getDriver(),this); }
+        public void login( String user_id, String user_pass) {
+//            Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
+            Driver.waitAndSendText(usernamebox,user_id,5);
+            Driver.waitAndSendText(passwordbox,user_pass,5);
+            Driver.waitAndClick(signInButton,5);
+
+        }
 
     @FindBy(id = "username")
-    public WebElement usernamebox;
+    public static WebElement usernamebox;
     @FindBy(id = "password")
-    public WebElement passwordbox;
+    public static WebElement passwordbox;
     @FindBy(xpath = "//button[@type='submit']")
-    public WebElement signInButton;
+    public static WebElement signInButton;
     @FindBy(xpath = "(//button[@type='button'])[3]")
     public WebElement cancelButton;
     @FindBy(xpath = "(//div[@class='alert alert-warning fade show'])[1]")
@@ -36,5 +41,5 @@ public class LoginPage {
     @FindBy(xpath = "//h1[@id='register-title']/span")
     public WebElement registrationPage;
 
-// index
+
 }

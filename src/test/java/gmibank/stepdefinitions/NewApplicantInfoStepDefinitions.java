@@ -1,28 +1,32 @@
 package gmibank.stepdefinitions;
 
 import gmibank.pages.CreateOrEditANewCustomer;
+import gmibank.pages.LoginPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.AfterClass;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
+
+
+
 public class NewApplicantInfoStepDefinitions {
+     LoginPage loginPage =new LoginPage();
     CreateOrEditANewCustomer createOrEditANewCustomer = new CreateOrEditANewCustomer();
 
-    @Given("the user goes to gmi_login_url and signs in as an Employee")
-    public void the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
-        Driver.waitAndSendText(createOrEditANewCustomer.userName,ConfigurationReader.getProperty("employee_id"),5);
-        Driver.waitAndSendText(createOrEditANewCustomer.password,ConfigurationReader.getProperty("employee_password"),5);
-        Driver.waitAndClick(createOrEditANewCustomer.submitButton,5);
-    }
+
+
+        @Given("user goes to gmi_login_url and signs in")
+        public void user_goes_to_gmi_login_url_and_signs_in(String user_id, String user_pass) {
+            Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
+            loginPage.login((ConfigurationReader.getProperty("employee_id")), (ConfigurationReader.getProperty("employee_password")));
+        }
 
     @When("user navigates to My operations")
     public void user_navigates_to_My_operations() {
