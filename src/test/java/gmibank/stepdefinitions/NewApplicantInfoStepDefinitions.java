@@ -1,6 +1,7 @@
 package gmibank.stepdefinitions;
 
 import gmibank.pages.CreateOrEditANewCustomer;
+import gmibank.pages.LoginPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -15,13 +16,12 @@ import java.util.List;
 
 public class NewApplicantInfoStepDefinitions {
     CreateOrEditANewCustomer createOrEditANewCustomer = new CreateOrEditANewCustomer();
+    LoginPage loginPage = new LoginPage();
 
     @Given("the user goes to gmi_login_url and signs in as an Employee")
     public void the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee() {
         Driver.getDriver().get(ConfigurationReader.getProperty("login_url"));
-        Driver.waitAndSendText(createOrEditANewCustomer.userName,ConfigurationReader.getProperty("employee_id"),5);
-        Driver.waitAndSendText(createOrEditANewCustomer.password,ConfigurationReader.getProperty("employee_password"),5);
-        Driver.waitAndClick(createOrEditANewCustomer.submitButton,5);
+        loginPage.login(ConfigurationReader.getProperty("employee_id"),ConfigurationReader.getProperty("employee_password"));
     }
 
     @When("user navigates to My operations")

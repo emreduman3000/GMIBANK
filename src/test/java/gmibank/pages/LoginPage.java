@@ -1,5 +1,6 @@
 package gmibank.pages;
 
+import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -40,5 +41,11 @@ public class LoginPage {
     @FindBy(xpath = "//*[@class='svg-inline--fa fa-user fa-w-14 ']")
     public WebElement userIcon;
 
-// index
+    public void login (String name, String password){
+        usernamebox.sendKeys(name);
+        passwordbox.sendKeys(password);
+        signInButton.click();
+    }
+
+
 }

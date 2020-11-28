@@ -69,8 +69,12 @@ public class CountryApiStepDefinitions {
             contentType(ContentType.JSON).
             auth().oauth2(ConfigurationReader.getProperty("api_bearer_token")).
             when().
-            body(CountryJson.createCountry).
-            post(url).then().contentType(ContentType.JSON).extract().response();
+            body("{\"name\": \""+country+"\"}").
+            post(url).
+            then().
+            contentType(ContentType.JSON).
+            extract().
+            response();
       response.prettyPrint();
     }
 
@@ -90,7 +94,7 @@ public class CountryApiStepDefinitions {
 
     @Given("user saves the countries to correspondent files")
     public void user_saves_the_countries_to_correspondent_files() {
-        WriteToTxt.saveDataInFileWithJsonListMap("us_21.csv",allCountryData);
+        WriteToTxt.saveDataInFileWithJsonListMap("us200.csv",allCountryData);
 
     }
 
