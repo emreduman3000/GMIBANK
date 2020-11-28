@@ -1,56 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="5" tests="5" time="0.661">
-<testcase classname="GMIBank Account Creation" name="TC1301 User can not leave the description textbox empty" time="0.084">
-<skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
-And the user goes to account creation page..................................undefined
-And the user clicks new account creation button.............................undefined
-When user leaves the description text box empty.............................skipped
-Then verify required description message....................................skipped
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="5" time="1.731">
+<testcase classname="System should allow employee to manage a customer" name="All customers should show up on manage customers module populating the account information of the customer &quot;First Name  Last Name  Middle Initial  Email  Mobile Phone Number  Phone Number  Address  Create Date&quot;" time="0.239">
+<system-out><![CDATA[Given User is on the sign in................................................skipped
+And navigate to manage customers............................................skipped
+And Find the total number of rows and cells in the table body...............skipped
+And Print headers, rows, and cells..........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="System should allow employee to manage a customer" name="There should be a View option where employee can be navigated to all customer info and see" time="0.014">
+<skipped><![CDATA[Given User is on the sign in................................................skipped
+And navigate to manage customers............................................skipped
+And Navigate to view option and click.......................................skipped
+Then user verify the customer page..........................................undefined
+And click on the edit button................................................skipped
+Then verify the customer edit page..........................................skipped
 ]]></skipped>
 </testcase>
-<testcase classname="GMIBank Account Creation" name="TC1302 User should see account type as CHECKING, SAVING, CREDIT_CARD or INVESTING on the Account Type dropdown" time="0.016">
-<skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
-And the user goes to account creation page..................................undefined
-And the user clicks new account creation button.............................undefined
-When user clicks Account Type dropdown......................................skipped
-Then verify all options are seen on the Account Type dropdown...............skipped
-]]></skipped>
+<testcase classname="System should allow employee to manage a customer" name="There should be an Edit button where all customer information can be populated" time="0.01">
+<system-out><![CDATA[Given User is on the sign in................................................skipped
+And navigate to manage customers............................................skipped
+And Navigate to edit button and click.......................................skipped
+And verify the customer edit page...........................................skipped
+]]></system-out>
 </testcase>
-<testcase classname="GMIBank Account Creation" name="TC1303 User should see Account status as ACTIVE, SUSPENDED or CLOSED on the Account status dropdown" time="0.016">
-<skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
-And the user goes to account creation page..................................undefined
-And the user clicks new account creation button.............................undefined
-When user clicks Account Status Type dropdown...............................skipped
-Then verify all options are seen on the Account Status Type dropdown........skipped
-]]></skipped>
+<testcase classname="System should allow employee to manage a customer" name="The Edit portal can allow user to create or update the user info" time="0.005">
+<system-out><![CDATA[Given User is on the sign in................................................skipped
+And navigate to manage customers............................................skipped
+And Navigate to create a new customer to edit and click.....................skipped
+And verify the customer edit page...........................................skipped
+]]></system-out>
 </testcase>
-<testcase classname="GMIBank Account Creation" name="TC1304 User can select an employee from the drop-down" time="0.015">
-<skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
-And the user goes to account creation page..................................undefined
-And the user clicks new account creation button.............................undefined
-When user clicks employee dropdown..........................................skipped
-Then verify all options are seen on the employee dropdown...................skipped
-]]></skipped>
-</testcase>
-<testcase classname="GMIBank Account Creation" name="TC1305 When users fill in all blanks properly and completely, they should be able to create a new account successfully" time="0.016">
-<skipped><![CDATA[Given the user goes to gmi_login_url and signs in as an Employee............skipped
-And the user goes to account creation page..................................undefined
-And the user clicks new account creation button.............................undefined
-When user enters description "btl saving"...................................skipped
-And user enters balance "20000".............................................skipped
-And user selects account type "SAVING"......................................skipped
-And user selects account status type "ACTIVE"...............................skipped
-And user clicks save button.................................................skipped
-Then verify account creation is successful..................................skipped
-=======
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="1" tests="1" time="1.765">
-<testcase classname="read,create,delete and update all states" name="read all states" time="0.236">
-<skipped><![CDATA[Given user sets all states to response using "https://www.gmibank.com/api/tp-states".skipped
-Given user deserializes all states pojo.....................................undefined
-And user generates all states data in correspondent files...................skipped
-Then user validates data for all states.....................................skipped
->>>>>>> Yesim
-]]></skipped>
+<testcase classname="System should allow employee to manage a customer" name="User can delete a customer, but seeing a message if the user is sure about deletion" time="0.007">
+<system-out><![CDATA[Given User is on the sign in................................................skipped
+And navigate to manage customers............................................skipped
+And Navigate to delete button and click.....................................skipped
+And user verify the confirm delete operation................................skipped
+Then user cancel the delete operation.......................................skipped
+]]></system-out>
 </testcase>
 </testsuite>

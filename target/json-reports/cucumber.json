@@ -4,283 +4,191 @@
     "elements": [
       {
         "line": 4,
-<<<<<<< HEAD
-        "name": "user should login as an employee",
-=======
-        "name": "read all states",
->>>>>>> Yesim
+        "name": "Sign in",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-<<<<<<< HEAD
+              "duration": 1000000,
               "status": "skipped"
             },
             "line": 5,
-            "name": "the user goes to gmi_login_url and signs in as an Employee",
+            "name": "User is on the sign in",
             "match": {
-              "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
-=======
-              "duration": 3000000,
-              "status": "skipped"
-            },
-            "line": 5,
-            "name": "user sets all states to response using \"https://www.gmibank.com/api/tp-states\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"https://www.gmibank.com/api/tp-states\"",
-                  "offset": 39
-                }
-              ],
-              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_sets_all_states_to_response_using(java.lang.String)"
->>>>>>> Yesim
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_is_on_the_sign_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 6,
-            "name": "the user goes to account creation page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "name": "navigate to manage customers",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_manage_customers()"
             },
-            "line": 7,
-            "name": "the user clicks new account creation button",
-            "match": {},
             "keyword": "And "
           }
         ]
       },
       {
-<<<<<<< HEAD
-        "start_timestamp": "2020-11-21T07:50:31.126Z",
+        "start_timestamp": "2020-11-28T04:36:16.141Z",
         "line": 9,
-        "name": "TC1301 User can not leave the description textbox empty",
+        "name": "All customers should show up on manage customers module populating the account information of the customer \"First Name  Last Name  Middle Initial  Email  Mobile Phone Number  Phone Number  Address  Create Date\"",
         "description": "",
-        "id": "gmibank-account-creation;tc1301-user-can-not-leave-the-description-textbox-empty",
-=======
-        "start_timestamp": "2020-11-24T13:49:35.020Z",
-        "line": 7,
-        "name": "read all states",
-        "description": "",
-        "id": "read-create-delete-and-update-all-states;read-all-states",
->>>>>>> Yesim
+        "id": "system-should-allow-employee-to-manage-a-customer;all-customers-should-show-up-on-manage-customers-module-populating-the-account-information-of-the-customer-\"first-name--last-name--middle-initial--email--mobile-phone-number--phone-number--address--create-date\"",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-<<<<<<< HEAD
+              "duration": 3000000,
               "status": "skipped"
             },
             "line": 10,
-            "name": "user leaves the description text box empty",
+            "name": "Find the total number of rows and cells in the table body",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_leaves_the_description_text_box_empty()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.find_the_total_number_of_rows_and_cells_in_the_table_body()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 11,
-            "name": "verify required description message",
+            "name": "Print headers, rows, and cells",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_required_description_message()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.print_headers_rows_and_cells()"
             },
-            "keyword": "Then "
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@newAccount"
+            "name": "@US_18"
+          },
+          {
+            "name": "@TC_0001"
           }
         ]
       },
       {
         "line": 4,
-        "name": "user should login as an employee",
+        "name": "Sign in",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+              "duration": 1000000,
               "status": "skipped"
             },
             "line": 5,
-            "name": "the user goes to gmi_login_url and signs in as an Employee",
+            "name": "User is on the sign in",
             "match": {
-              "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_is_on_the_sign_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 6,
-            "name": "the user goes to account creation page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "name": "navigate to manage customers",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_manage_customers()"
             },
-            "line": 7,
-            "name": "the user clicks new account creation button",
-            "match": {},
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2020-11-21T07:50:31.232Z",
-        "line": 13,
-        "name": "TC1302 User should see account type as CHECKING, SAVING, CREDIT_CARD or INVESTING on the Account Type dropdown",
-        "description": "",
-        "id": "gmibank-account-creation;tc1302-user-should-see-account-type-as-checking--saving--credit-card-or-investing-on-the-account-type-dropdown",
+        "start_timestamp": "2020-11-28T04:36:16.493Z",
+        "line": 14,
+        "name": "There should be a View option where employee can be navigated to all customer info and see",
+        "description": "  edit button there",
+        "id": "system-should-allow-employee-to-manage-a-customer;there-should-be-a-view-option-where-employee-can-be-navigated-to-all-customer-info-and-see",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 16000000,
+              "duration": 2000000,
               "status": "skipped"
             },
-            "line": 14,
-            "name": "user clicks Account Type dropdown",
+            "line": 16,
+            "name": "Navigate to view option and click",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_clicks_Account_Type_dropdown()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_view_option_and_click()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "undefined"
             },
-            "line": 15,
-            "name": "verify all options are seen on the Account Type dropdown",
-            "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_all_options_are_seen_on_the_Account_Type_dropdown()"
-            },
+            "line": 17,
+            "name": "user verify the customer page",
+            "match": {},
             "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@newAccount"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "user should login as an employee",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 5,
-            "name": "the user goes to gmi_login_url and signs in as an Employee",
-            "match": {
-              "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
-            },
-            "keyword": "Given "
           },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 6,
-            "name": "the user goes to account creation page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 7,
-            "name": "the user clicks new account creation button",
-            "match": {},
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-11-21T07:50:31.248Z",
-        "line": 17,
-        "name": "TC1303 User should see Account status as ACTIVE, SUSPENDED or CLOSED on the Account status dropdown",
-        "description": "",
-        "id": "gmibank-account-creation;tc1303-user-should-see-account-status-as-active--suspended-or-closed-on-the-account-status-dropdown",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
           {
             "result": {
               "status": "skipped"
             },
             "line": 18,
-            "name": "user clicks Account Status Type dropdown",
+            "name": "click on the edit button",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_clicks_Account_Status_Type_dropdown()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.click_on_the_edit_button()"
             },
-            "keyword": "When "
+            "keyword": "And "
           },
           {
             "result": {
               "status": "skipped"
             },
             "line": 19,
-            "name": "verify all options are seen on the Account Status Type dropdown",
+            "name": "verify the customer edit page",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_all_options_are_seen_on_the_Account_Status_Type_dropdown()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.verify_the_customer_edit_page()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@newAccount"
+            "name": "@US_18"
+          },
+          {
+            "name": "@TC_0002"
           }
         ]
       },
       {
         "line": 4,
-        "name": "user should login as an employee",
+        "name": "Sign in",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
+              "duration": 4000000,
               "status": "skipped"
             },
             "line": 5,
-            "name": "the user goes to gmi_login_url and signs in as an Employee",
+            "name": "User is on the sign in",
             "match": {
-              "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
-=======
-              "status": "undefined"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_is_on_the_sign_in()"
             },
-            "line": 8,
-            "name": "user deserializes all states pojo",
-            "match": {},
             "keyword": "Given "
           },
           {
@@ -288,197 +196,107 @@
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 9,
-            "name": "user generates all states data in correspondent files",
-            "match": {
-              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_generates_all_states_data_in_correspondent_files()"
->>>>>>> Yesim
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
             "line": 6,
-            "name": "the user goes to account creation page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "name": "navigate to manage customers",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_manage_customers()"
             },
-            "line": 7,
-            "name": "the user clicks new account creation button",
-            "match": {},
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2020-11-21T07:50:31.264Z",
-        "line": 21,
-        "name": "TC1304 User can select an employee from the drop-down",
+        "start_timestamp": "2020-11-28T04:36:16.534Z",
+        "line": 23,
+        "name": "There should be an Edit button where all customer information can be populated",
         "description": "",
-        "id": "gmibank-account-creation;tc1304-user-can-select-an-employee-from-the-drop-down",
+        "id": "system-should-allow-employee-to-manage-a-customer;there-should-be-an-edit-button-where-all-customer-information-can-be-populated",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 15000000,
-              "status": "skipped"
-            },
-            "line": 22,
-            "name": "user clicks employee dropdown",
-            "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_clicks_employee_dropdown()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-<<<<<<< HEAD
-              "status": "skipped"
-            },
-            "line": 23,
-            "name": "verify all options are seen on the employee dropdown",
-            "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_all_options_are_seen_on_the_employee_dropdown()"
-=======
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 10,
-            "name": "user validates data for all states",
+            "line": 24,
+            "name": "Navigate to edit button and click",
             "match": {
-              "location": "gmibank.stepdefinitions.StatesApiStepDef.user_validates_data_for_all_states()"
->>>>>>> Yesim
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_edit_button_and_click()"
             },
-            "keyword": "Then "
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "verify the customer edit page",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.verify_the_customer_edit_page()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-<<<<<<< HEAD
-            "name": "@newAccount"
+            "name": "@US_18"
+          },
+          {
+            "name": "@TC_0003"
           }
         ]
       },
       {
         "line": 4,
-        "name": "user should login as an employee",
+        "name": "Sign in",
         "description": "",
         "type": "background",
         "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 16000000,
               "status": "skipped"
             },
             "line": 5,
-            "name": "the user goes to gmi_login_url and signs in as an Employee",
+            "name": "User is on the sign in",
             "match": {
-              "location": "gmibank.stepdefinitions.NewApplicantInfoStepDefinitions.the_user_goes_to_https_gmibank_com_login_and_signs_in_as_an_Employee()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_is_on_the_sign_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1000000,
+              "status": "skipped"
             },
             "line": 6,
-            "name": "the user goes to account creation page",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "undefined"
+            "name": "navigate to manage customers",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_manage_customers()"
             },
-            "line": 7,
-            "name": "the user clicks new account creation button",
-            "match": {},
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2020-11-21T07:50:31.279Z",
-        "line": 35,
-        "name": "TC1305 When users fill in all blanks properly and completely, they should be able to create a new account successfully",
+        "start_timestamp": "2020-11-28T04:36:16.560Z",
+        "line": 28,
+        "name": "The Edit portal can allow user to create or update the user info",
         "description": "",
-        "id": "gmibank-account-creation;tc1305-when-users-fill-in-all-blanks-properly-and-completely--they-should-be-able-to-create-a-new-account-successfully;test-data;2",
+        "id": "system-should-allow-employee-to-manage-a-customer;the-edit-portal-can-allow-user-to-create-or-update-the-user-info",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "skipped"
-            },
-            "line": 26,
-            "name": "user enters description \"btl saving\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"btl saving\"",
-                  "offset": 24
-                }
-              ],
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_enters_description(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 27,
-            "name": "user enters balance \"20000\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"20000\"",
-                  "offset": 20
-                }
-              ],
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_enters_balance(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 28,
-            "name": "user selects account type \"SAVING\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"SAVING\"",
-                  "offset": 26
-                }
-              ],
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_selects_account_type(java.lang.String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
+              "duration": 2000000,
               "status": "skipped"
             },
             "line": 29,
-            "name": "user selects account status type \"ACTIVE\"",
+            "name": "Navigate to create a new customer to edit and click",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"ACTIVE\"",
-                  "offset": 33
-                }
-              ],
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_selects_account_status_type(java.lang.String)"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_create_a_new_customer_to_edit_and_click()"
             },
             "keyword": "And "
           },
@@ -487,53 +305,118 @@
               "status": "skipped"
             },
             "line": 30,
-            "name": "user clicks save button",
+            "name": "verify the customer edit page",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.user_clicks_save_button()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.verify_the_customer_edit_page()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@US_18"
+          },
+          {
+            "name": "@TC_0004"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "Sign in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "User is on the sign in",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_is_on_the_sign_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "navigate to manage customers",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_manage_customers()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-28T04:36:16.595Z",
+        "line": 33,
+        "name": "User can delete a customer, but seeing a message if the user is sure about deletion",
+        "description": "",
+        "id": "system-should-allow-employee-to-manage-a-customer;user-can-delete-a-customer--but-seeing-a-message-if-the-user-is-sure-about-deletion",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 34,
+            "name": "Navigate to delete button and click",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.navigate_to_delete_button_and_click()"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "skipped"
             },
-            "line": 31,
-            "name": "verify account creation is successful",
+            "line": 35,
+            "name": "user verify the confirm delete operation",
             "match": {
-              "location": "gmibank.stepdefinitions.AccountCreationStepDef.verify_account_creation_is_successful()"
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_verify_the_confirm_delete_operation()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "user cancel the delete operation",
+            "match": {
+              "location": "gmibank.stepdefinitions.US_18StepDefinitions.user_cancel_the_delete_operation()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@newAccount"
-=======
-            "name": "@AllStates"
->>>>>>> Yesim
+            "name": "@US_18"
+          },
+          {
+            "name": "@TC_0005"
           }
         ]
       }
     ],
-<<<<<<< HEAD
-    "name": "GMIBank Account Creation",
+    "name": "System should allow employee to manage a customer",
     "description": "",
-    "id": "gmibank-account-creation",
+    "id": "system-should-allow-employee-to-manage-a-customer",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/newAccount.feature",
+    "uri": "file:src/test/resources/features/US_018.feature",
     "tags": [
       {
-        "name": "@newAccount",
-=======
-    "name": "read,create,delete and update all states",
-    "description": "",
-    "id": "read-create-delete-and-update-all-states",
-    "keyword": "Feature",
-    "uri": "file:src/test/resources/features/US_24_Api.feature",
-    "tags": [
-      {
-        "name": "@AllStates",
->>>>>>> Yesim
+        "name": "@US_18",
         "type": "Tag",
         "location": {
           "line": 1,

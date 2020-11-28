@@ -1,5 +1,4 @@
 package gmibank.stepdefinitions;
-
 import gmibank.pages.LoginPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
