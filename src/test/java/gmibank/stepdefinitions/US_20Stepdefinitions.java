@@ -1,8 +1,9 @@
 package gmibank.stepdefinitions;
 
 import gmibank.utilities.ConfigurationReader;
-import gmibank.utilities.WriteToText2;
 import gmibank.utilities.WriteToTxt;
+import gmibank.utilities.WriteToTxt;
+import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -40,7 +41,7 @@ public class US_20Stepdefinitions {
     }
 
     @Given("get all customers information as De-Serialization")
-    public void get_all_customers_information_as_De_Serialization() {
+    public void get_all_customers_information_as_De_Serialization() throws Exception {
           response.prettyPrint();
         allCustomerData = json.getList("$");//butun data elimizde
         System.out.println("Java List Map response : " + allCustomerData);
@@ -54,6 +55,12 @@ public class US_20Stepdefinitions {
         int customerId=(int) allCustomerData.get(7).get("id");
         System.out.println("customerId : "+customerId);
 
+     //   2. yontem ==> Pojo
+
+
+
+
+
     }
 
     @Given("find out how many customers are and verify that there are {int} customers")
@@ -65,7 +72,7 @@ public class US_20Stepdefinitions {
     @Given("get all the information of the seventh customer")
     public void get_all_the_information_of_the_seventh_customer() {
         System.out.println(allCustomerData.get(6));
-        WriteToText2.saveDataInFileWithJsonListMap("us_20.csv",allCustomerData);
+        WriteToTxt.saveDataInFileWithJsonListMap("us_20.csv",allCustomerData);
     }
 
     @Given("verify seventh customers ssn is {string} and country name is {string}")
