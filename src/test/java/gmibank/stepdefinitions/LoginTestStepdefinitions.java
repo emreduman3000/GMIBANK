@@ -3,6 +3,7 @@ package gmibank.stepdefinitions;
 import gmibank.pages.LoginPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -47,6 +48,15 @@ public class LoginTestStepdefinitions {
         }
         String title = Driver.getDriver().getTitle();
         Assert.assertTrue(title.contains("GMIBANK"));
+    }
+    @And("user clicks on userIcon")
+    public void userClicksOnUsername() {
+        Driver.waitAndClick(loginPage.userIcon,5);
+    }
+
+    @And("user clicks on sign out button")
+    public void userClicksOnSignOutButton() {
+        Driver.waitAndClick(loginPage.signOutButton,5);
     }
 
     @Given("user clicks on the cancel button")

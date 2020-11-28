@@ -2,11 +2,14 @@ package gmibank.utilities;
 import gmibank.pojos.Customer;
 import gmibank.pojos.States;
 import io.restassured.path.json.JsonPath;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.List;
 import java.util.Map;
+
 public class WriteToTxt {
+
     JsonPath json;
     public static void saveDataInFile(String fileName, Customer[] customers) {
         try {
@@ -17,6 +20,7 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+
     public static void saveDataInFileWithSSN(String fileName, Customer customer) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -25,6 +29,7 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+
     public static void saveDataInFileWithUserInfo(String fileName, Customer customer) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -33,6 +38,7 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+
     public static void saveDataInFileWithAllCustomerInfo(String fileName, Customer[] customers) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -47,6 +53,7 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+
     public static void saveAllStates(String fileName, States[] states) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -56,6 +63,7 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+
     public static void saveAllStates2(String fileName, States[] states) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -63,8 +71,10 @@ public class WriteToTxt {
                 writer.append(states[i].getName() + " , " + states[i].getId() + "\n");
             writer.close();
         } catch (Exception e) {
+
         }
     }
+
     public static void saveDataInFileWithPojo(String fileName, List<Customer> customer) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -75,6 +85,7 @@ public class WriteToTxt {
         } catch (Exception e) {
         }
     }
+
     public static void saveDataInFileWithJsonListString(String fileName, List<String> json) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
@@ -87,10 +98,13 @@ public class WriteToTxt {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
             for (int i = 0; i <json.size() ; i++) {
-                writer.append(json.get(i).get("id") + " , " + json.get(i).get("name") + " , " + json.get(i).get("tpcountry") + "\n");
+                writer.append(json.get(i).get("id") + " , " + json.get(i).get("name") + " , " + json.get(i).get("states") + "\n");
             }
             writer.close();
         } catch (Exception e) {
         }
     }
 }
+
+
+

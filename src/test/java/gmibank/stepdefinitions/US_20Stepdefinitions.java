@@ -1,9 +1,6 @@
 package gmibank.stepdefinitions;
-
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.WriteToTxt;
-import gmibank.utilities.WriteToTxt;
-import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -31,9 +28,9 @@ public class US_20Stepdefinitions {
         response.then().
                 assertThat().
                 statusCode(200);//restassuredaki assertle yapmis oldum
-      //response in icindeki then le assert etmis oldum yani hersey yolunda mi ?
-      //  Eger post, put, patch request yapiyorsak accept type yerine ==> content type kullanmaliyiz.
-      //    get ve delete de ==> accept type kullanabiliriz.
+        //response in icindeki then le assert etmis oldum yani hersey yolunda mi ?
+        //  Eger post, put, patch request yapiyorsak accept type yerine ==> content type kullanmaliyiz.
+        //    get ve delete de ==> accept type kullanabiliriz.
 
         //response.prettyPrint();//bununla da cevabi consolda yazdiriyor
 
@@ -41,8 +38,8 @@ public class US_20Stepdefinitions {
     }
 
     @Given("get all customers information as De-Serialization")
-    public void get_all_customers_information_as_De_Serialization() throws Exception {
-          response.prettyPrint();
+    public void get_all_customers_information_as_De_Serialization() {
+        response.prettyPrint();
         allCustomerData = json.getList("$");//butun data elimizde
         System.out.println("Java List Map response : " + allCustomerData);
         System.out.println("First Customer Info :"+allCustomerData.get(0));
@@ -55,45 +52,40 @@ public class US_20Stepdefinitions {
         int customerId=(int) allCustomerData.get(7).get("id");
         System.out.println("customerId : "+customerId);
 
-     //   2. yontem ==> Pojo
-
-
-
-
-
     }
 
     @Given("find out how many customers are and verify that there are {int} customers")
     public void find_out_how_many_customers_are_and_verify_that_there_are_customers(Integer customerCount) {
         Integer actualCustumerCount =  allCustomerData.size();
-         Assert.assertEquals(customerCount,actualCustumerCount);
+        System.out.println("number of customers: "+actualCustumerCount);
+        Assert.assertEquals(customerCount,actualCustumerCount);
     }
 
-    @Given("get all the information of the seventh customer")
-    public void get_all_the_information_of_the_seventh_customer() {
-        System.out.println(allCustomerData.get(6));
-        WriteToTxt.saveDataInFileWithJsonListMap("us_20.csv",allCustomerData);
+    @Given("get all the information of the 3th customer")
+    public void get_all_the_information_of_the_3th_customer() {
+        System.out.println(allCustomerData.get(2));
+        WriteToTxt.saveDataInFileWithJsonListMap("us20.csv",allCustomerData);
     }
 
-    @Given("verify seventh customers ssn is {string} and country name is {string}")
-    public void verify_seventh_customers_ssn_is_and_country_name_is(String expectedSsn, String expectedcountry) {
-     String actualSsn= allCustomerData.get(6).get("ssn").toString();
-     Assert.assertEquals(actualSsn,expectedSsn);
+    @Given("verify 3rd customers ssn and country name")
+    public void verify_3rd_customers_ssn_is_and_country_name_is() {
+        String actualSsn= allCustomerData.get(2).get("ssn").toString();
+        Assert.assertEquals(actualSsn,"219-02-1962");
 
-     String actualCountryName=json.getString("country[6].name");
-     Assert.assertEquals(expectedcountry,actualCountryName);
+        String actualCountryName=json.getString("country[2].name");
+        Assert.assertEquals(actualCountryName, "UNITED STATES");
     }
 
     @Given("verify first customer's firstName {string}")
     public void verify_first_customer_s_firstName(String expectedFirstName) {
-   Assert.assertEquals(expectedFirstName,allCustomerData.get(0).get("firstName"));
+        Assert.assertEquals(expectedFirstName,allCustomerData.get(0).get("firstName"));
     }
 
     @Given("verify second customer's lastName {string}")
     public void verify_second_customer_s_lastName(String expectedLastName) {
 
-   String actualLastName=allCustomerData.get(1).get("lastName").toString();
-       Assert.assertEquals(expectedLastName,actualLastName);
+        String actualLastName=allCustomerData.get(1).get("lastName").toString();
+        Assert.assertEquals(expectedLastName,actualLastName);
 
     }
 

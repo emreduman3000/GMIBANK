@@ -36,10 +36,12 @@ public class LoginPage {
     public WebElement verifyMessage;
     @FindBy(xpath = "//h1[@id='register-title']/span")
     public WebElement registrationPage;
-    @FindBy(xpath = "//*[@id=\"account-menu\"]/a")
-    public WebElement signOut;
-    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div[1]/div/div/div/a/button")
-    public WebElement signInAgain;
+
+    @FindBy (xpath = "//*[.='Sign out']")
+    public WebElement signOutButton;
+
+    @FindBy(xpath = "//*[@class='svg-inline--fa fa-user fa-w-14 ']")
+    public WebElement userIcon;
 
     @FindBy(xpath = "//*[contains(text(),'My Operations')]")
     public WebElement myOperations;
@@ -75,6 +77,6 @@ public class LoginPage {
     public WebElement verifyCustomer;
 
 
-
+// index
 
 }
