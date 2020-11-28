@@ -1,7 +1,7 @@
 package gmibank.pages;
 
+import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -36,47 +36,16 @@ public class LoginPage {
     public WebElement verifyMessage;
     @FindBy(xpath = "//h1[@id='register-title']/span")
     public WebElement registrationPage;
-
     @FindBy (xpath = "//*[.='Sign out']")
     public WebElement signOutButton;
-
     @FindBy(xpath = "//*[@class='svg-inline--fa fa-user fa-w-14 ']")
     public WebElement userIcon;
 
-    @FindBy(xpath = "//*[contains(text(),'My Operations')]")
-    public WebElement myOperations;
+    public void login (String name, String password){
+        usernamebox.sendKeys(name);
+        passwordbox.sendKeys(password);
+        signInButton.click();
+    }
 
-    @FindBy(xpath = "//*[contains(text(),'Manage Customers')]")
-    public WebElement manageCustomers;
-
-    @FindBy(tagName = "th")
-    public WebElement allInformationHeader;
-
-    @FindBy(linkText = "(//*[contains(text(),'View')])[1]")
-    public WebElement viewButton;
-
-    @FindBy(xpath = "//*[contains(text(),'Edit')]")
-    public WebElement editButton;
-
-    @FindBy(xpath = "//*[contains(text(),'Create or edit a Customer')]")
-    public WebElement verifyPage;
-
-    @FindBy(id = "jh-create-entity")
-    public WebElement editPortal;
-
-    @FindBy(xpath = "//*[contains(text(),'Delete')]")
-    public WebElement deleteButton;
-
-    @FindBy(xpath = "//*[contains(text(),'Confirm delete operation')]")
-    public WebElement confirmDeleteOperation;
-
-    @FindBy(xpath = "(//button[@type='button'])[3]")
-    public WebElement deleteCancelButton;
-
-    @FindBy(xpath = "(//*[contains(text(),'Customer')])[2]")
-    public WebElement verifyCustomer;
-
-
-// index
 
 }
