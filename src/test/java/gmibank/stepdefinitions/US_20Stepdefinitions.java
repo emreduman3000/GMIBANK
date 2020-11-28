@@ -1,4 +1,5 @@
 package gmibank.stepdefinitions;
+
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.WriteToTxt;
 import io.cucumber.java.en.Given;

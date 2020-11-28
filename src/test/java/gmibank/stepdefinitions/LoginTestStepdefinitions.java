@@ -1,5 +1,4 @@
 package gmibank.stepdefinitions;
-
 import gmibank.pages.LoginPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
@@ -7,9 +6,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class LoginTestStepdefinitions {
     LoginPage loginPage = new LoginPage();
@@ -23,19 +19,19 @@ public class LoginTestStepdefinitions {
     @Given("user clicks on the username textbox and text {string}")
     public void user_clicks_on_the_username_textbox_and_text(String string) {
 
-        Driver.waitAndSendText(loginPage.usernamebox, string, 5);
+        Driver.waitAndSendTextWithoutEnter(loginPage.usernamebox,string,5);
     }
 
     @Given("user clicks on the password textbox and text {string}")
     public void user_clicks_on_the_password_textbox_and_text(String string) {
-        Driver.waitAndSendText(loginPage.passwordbox, string, 5);
+        Driver.waitAndSendTextWithoutEnter(loginPage.passwordbox,string,5);
 
     }
 
 
     @Given("user clicks on the sign in button")
     public void user_clicks_on_the_sign_in_button() {
-        Driver.waitAndClick(loginPage.signInButton, 5);
+        Driver.waitAndClick(loginPage.signInButton,5);
 
     }
 
@@ -49,6 +45,7 @@ public class LoginTestStepdefinitions {
         String title = Driver.getDriver().getTitle();
         Assert.assertTrue(title.contains("GMIBANK"));
     }
+
     @And("user clicks on userIcon")
     public void userClicksOnUsername() {
         Driver.waitAndClick(loginPage.userIcon,5);
@@ -61,7 +58,7 @@ public class LoginTestStepdefinitions {
 
     @Given("user clicks on the cancel button")
     public void user_clicks_on_the_cancel_button_button() {
-        Driver.waitAndClick(loginPage.cancelButton, 5);
+        Driver.waitAndClick(loginPage.cancelButton,5);
 
     }
 
@@ -73,12 +70,10 @@ public class LoginTestStepdefinitions {
             e.printStackTrace();
         }
 
-        String title = Driver.getDriver().getTitle();
+        String title= Driver.getDriver().getTitle();
         Assert.assertTrue(title.contains("GMIBANK"));
 
     }
-
-
 
 }
 

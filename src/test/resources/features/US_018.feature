@@ -5,10 +5,12 @@ Feature: System should allow employee to manage a customer
     Given User is on the sign in
     And navigate to manage customers
 
+
   @TC_0001
   Scenario: All customers should show up on manage customers module populating the account information of the customer "First Name  Last Name  Middle Initial  Email  Mobile Phone Number  Phone Number  Address  Create Date"
     And Find the total number of rows and cells in the table body
     And Print headers, rows, and cells
+
 
   @TC_0002
   Scenario: There should be a View option where employee can be navigated to all customer info and see

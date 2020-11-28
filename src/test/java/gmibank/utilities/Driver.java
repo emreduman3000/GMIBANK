@@ -130,6 +130,17 @@ public class Driver
         }
     }
 
+    public static void waitAndSendTextWithoutEnter(WebElement element, String text, int timeout){
+        for (int i = 0; i < timeout; i++) {
+            try {
+                element.sendKeys(text);
+                return;
+            } catch (WebDriverException e) {
+                waitFor(1);
+            }
+        }
+    }
+
     public static String waitAndGetText(WebElement element, int timeout){
         String text="";
         for (int i = 0; i < timeout; i++) {
