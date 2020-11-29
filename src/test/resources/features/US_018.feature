@@ -10,6 +10,7 @@ Feature: System should allow employee to manage a customer
   Scenario: All customers should show up on manage customers module populating the account information of the customer "First Name  Last Name  Middle Initial  Email  Mobile Phone Number  Phone Number  Address  Create Date"
     And Find the total number of rows and cells in the table body
     And Print headers, rows, and cells
+    And user clicks on sign out button
 
 
   @TC_0002
@@ -19,23 +20,25 @@ Feature: System should allow employee to manage a customer
     Then user verify the customer page
     And click on the edit button
     Then verify the customer edit page
-
+    And user clicks on sign out button
 
   @TC_0003
   Scenario: There should be an Edit button where all customer information can be populated
    And Navigate to edit button and click
     And verify the customer edit page
+    And user clicks on sign out button
 
     @TC_0004
     Scenario: The Edit portal can allow user to create or update the user info
       And Navigate to create a new customer to edit and click
       And verify the customer edit page
+      And user clicks on sign out button
 
       @TC_0005
       Scenario: User can delete a customer, but seeing a message if the user is sure about deletion
        And Navigate to delete button and click
         And user verify the confirm delete operation
         Then user cancel the delete operation
-
+        And user clicks on sign out button
 
 

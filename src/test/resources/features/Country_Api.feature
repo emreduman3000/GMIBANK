@@ -15,8 +15,11 @@ Feature: System should allow to read all countries info using api end point
     Given user sets the response using api end point "https://www.gmibank.com/api/tp-countries" and creates country using "<idJson>" and "<nameJson>"
     Examples: create country
       | idJson | nameJson |
-      | name   | France   |
-      | name   | Mombasa  |
+      | name   | Egypt    |
+      | name   |Madagascar|
+      | name   | Mali     |
+      | name   | Uganda   |
+
 
   Scenario: read all countries
     Given user sets the countries to response using "https://www.gmibank.com/api/tp-countries"

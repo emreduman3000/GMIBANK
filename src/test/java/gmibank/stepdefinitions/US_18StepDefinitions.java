@@ -1,5 +1,6 @@
 package gmibank.stepdefinitions;
 
+import gmibank.pages.CustomerPage;
 import gmibank.pages.LoginPage;
 import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
@@ -13,6 +14,7 @@ import java.util.List;
 
 public class US_18StepDefinitions {
     LoginPage loginPage = new LoginPage();
+    CustomerPage customer=new CustomerPage();
 
     @Given("User is on the sign in")
     public void user_is_on_the_sign_in() {
@@ -24,8 +26,8 @@ public class US_18StepDefinitions {
 
     @Given("navigate to manage customers")
     public void navigate_to_manage_customers() {
-        loginPage.myOperations.click();
-        loginPage.manageCustomers.click();
+        customer.myOperationsButton.click();
+        customer.manageCustomers.click();
 
     }
 
@@ -54,56 +56,56 @@ public class US_18StepDefinitions {
 
     @Given("Navigate to view option and click")
     public void navigate_to_view_option_and_click() {
-     Driver.waitAndClick(loginPage.viewButton,5);
+     Driver.waitAndClick(customer.viewButton,5);
 
     }
 
     @Then("user verify the customer page")
     public void user_verify_the_customer_page() {
 
-        Assert.assertTrue(Driver.waitAndGetText(loginPage.verifyCustomer,5).contains("Customer"));
+        Assert.assertTrue(Driver.waitAndGetText(customer.verifyViewButton,5).contains("Customer"));
     }
 
 
     @Given("click on the edit button")
     public void click_on_the_edit_button() {
-        loginPage.editButton.click();
+        customer.editButton.click();
 
     }
 
     @Then("verify the customer edit page")
     public void verify_the_customer_edit_page() {
-        Assert.assertTrue(Driver.waitAndGetText(loginPage.verifyPage,5).contains("Create or edit a Customer"));
+        Assert.assertTrue(Driver.waitAndGetText(customer.verifyEditPage,5).contains("Create or edit a Customer"));
 
     }
 
     @Given("Navigate to edit button and click")
     public void navigate_to_edit_button_and_click() {
-      Driver.waitAndClick(loginPage.editButton,5);
+      Driver.waitAndClick(customer.editButton,5);
     }
 
     @Given("Navigate to create a new customer to edit and click")
     public void navigate_to_create_a_new_customer_to_edit_and_click() {
-      Driver.waitAndClick(loginPage.editPortal,5);
+      Driver.waitAndClick(customer.createCustomer,5);
 
     }
 
     @Given("Navigate to delete button and click")
     public void navigate_to_delete_button_and_click() {
-        Driver.waitAndClick(loginPage.deleteButton,5);
+        Driver.waitAndClick(customer.deleteButton,5);
 
     }
 
     @Then("user verify the confirm delete operation")
     public void user_verify_the_confirm_delete_operation() {
 
-        Assert.assertTrue(Driver.waitAndGetText(loginPage.confirmDeleteOperation,5).contains("Confirm delete operation"));
+        Assert.assertTrue(Driver.waitAndGetText(customer.deleteMessage,5).contains("Confirm delete operation"));
 
     }
 
     @Then("user cancel the delete operation")
     public void user_cancel_the_delete_operation() {
-        Driver.waitAndClick(loginPage.deleteCancelButton,5);
+        Driver.waitAndClick(customer.deleteCancel,5);
 
 
     }
