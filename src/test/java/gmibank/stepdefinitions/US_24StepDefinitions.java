@@ -76,7 +76,7 @@ public class US_24StepDefinitions {
                 contentType(ContentType.JSON).
                 auth().oauth2(ConfigurationReader.getProperty("api_bearer_token")).
                 when().
-                body(StateJson.CREATE_STATE).
+                body(StateJson.CREATE_STATE4).
                 post(endpointUrl).then().contentType(ContentType.JSON).extract().response();
         response.prettyPrint();
 
